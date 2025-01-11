@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "management.endpoints.web.cors",
+      "type": "pw.react.backend.models.CorsProperties",
+      "sourceType": "pw.react.backend.models.CorsProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "management.endpoints.web.cors.allowed-headers",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "pw.react.backend.models.CorsProperties"
+    },
+    {
+      "name": "management.endpoints.web.cors.allowed-methods",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "pw.react.backend.models.CorsProperties"
+    },
+    {
+      "name": "management.endpoints.web.cors.allowed-origin-patterns",
+      "type": "java.lang.String",
+      "sourceType": "pw.react.backend.models.CorsProperties"
+    },
+    {
+      "name": "management.endpoints.web.cors.allowed-origins",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "pw.react.backend.models.CorsProperties"
+    }
+  ],
+  "hints": []
+}
