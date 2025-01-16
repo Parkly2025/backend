@@ -19,11 +19,15 @@ import pw.react.backend.dao.ReservationRepository;
 import pw.react.backend.dao.UserRepository;
 import pw.react.backend.dto.CreateParkingSpotDTO;
 import pw.react.backend.dto.CreateReservationDTO;
+import pw.react.backend.dto.ReturnReservationDTO;
+import pw.react.backend.exceptions.ModelNotFoundException;
 import pw.react.backend.exceptions.ModelValidationException;
 import pw.react.backend.models.ParkingSpot;
 import pw.react.backend.models.Reservation;
 import pw.react.backend.models.User;
 import pw.react.backend.services.ReservationService;
+import pw.react.backend.utils.ProtectedEndpoint;
+import pw.react.backend.utils.Utils;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -32,7 +36,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/reservations")
-@Tag(name = "Reservations (NOT DONE!)", description = "Operations related to parking spot reservations")
+@Tag(name = "Reservations (no integration with Carly or whatever other team)", description = "Operations related to parking spot reservations")
 public class ReservationController {
 
     final private ReservationService reservationService;
@@ -43,16 +47,31 @@ public class ReservationController {
 
 
     @GetMapping("/page/{page}")
-    public Page<Reservation> getAllReservations(
+    public Page<ReturnReservationDTO> getAllReservations(
             @Parameter(description = "Page number (0-based)", required = true) @PathVariable int page,
             @Parameter(description = "Page size") @RequestParam(value = "size", required = false, defaultValue = "10") int size,
             @Parameter(description = "Sort direction (asc or desc)") @RequestParam(value = "sortDirection", required = false, defaultValue = "asc") String sortDirection) {
-        return reservationService.findAll(size, page, sortDirection);
+        return reservationService.findAll(page, size, sortDirection).map(ReturnReservationDTO::fromModel);
     }
 
 
+    @GetMapping("/user/{id}/page/{page}")
+    @ProtectedEndpoint
+    public Page<ReturnReservationDTO> getAllUserReservations(
+            @PathVariable Long id,
+            @PathVariable int page,
+            @RequestParam(value = "size", required = false, defaultValue = "10") int size,
+            @RequestParam(value = "sortDirection", required = false, defaultValue = "asc") String sortDirection) {
+        return reservationService.findByUserId(page, size, sortDirection, id).map(ReturnReservationDTO::fromModel);
+    }
+
     @GetMapping("/{id}")
-    public ResponseEntity<Reservation> getReservationById(@Parameter(description = "ID of the reservation to retrieve", required = true) @PathVariable Long id) {
+    @ProtectedEndpoint
+    public ResponseEntity<?> getReservationById(
+            @Parameter(description = "ID of the reservation to retrieve", required = true) @PathVariable Long id,
+            @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdminOrUser(userRole))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         return reservationService.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
@@ -60,9 +79,14 @@ public class ReservationController {
 
 
     @PostMapping
-    public ResponseEntity<?> createReservation(@Parameter(description = "Reservation object DTO to create", required = true, schema = @Schema(implementation = CreateReservationDTO.class)) @RequestBody CreateReservationDTO reservationDTO) {
+    @ProtectedEndpoint
+    public ResponseEntity<?> createReservation(
+            @Parameter(description = "Reservation object DTO to create", required = true, schema = @Schema(implementation = CreateReservationDTO.class)) @RequestBody CreateReservationDTO reservationDTO,
+            @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdminOrUser(userRole))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         try {
-            return ResponseEntity.ok(reservationService.create(reservationDTO));
+            return ResponseEntity.ok(ReturnReservationDTO.fromModel(reservationService.create(reservationDTO)));
         } catch (ModelValidationException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
@@ -70,7 +94,12 @@ public class ReservationController {
 
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteReservation(@Parameter(description = "ID of the reservation to delete", required = true) @PathVariable Long id) {
+    @ProtectedEndpoint
+    public ResponseEntity<?> deleteReservation(
+            @Parameter(description = "ID of the reservation to delete", required = true) @PathVariable Long id,
+            @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdminOrUser(userRole))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         try {
             reservationService.delete(id);
             return ResponseEntity.ok().build();
@@ -79,5 +108,18 @@ public class ReservationController {
         }
     }
 
-    // TODO: PUT endpoint
+    @PutMapping("/{id}")
+    @ProtectedEndpoint
+    public ResponseEntity<?> updateReservation(
+            @PathVariable Long id, @RequestBody CreateReservationDTO reservationDTO,
+            @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdminOrUser(userRole))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        try {
+            Reservation reservation = reservationService.update(id, reservationDTO);
+            return ResponseEntity.ok().body(ReturnReservationDTO.fromModel(reservation));
+        } catch (ModelValidationException | ModelNotFoundException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 }

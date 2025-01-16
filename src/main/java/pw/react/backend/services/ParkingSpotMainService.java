@@ -6,7 +6,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import pw.react.backend.dao.ParkingAreaRepository;
 import pw.react.backend.dao.ParkingSpotRepository;
-import pw.react.backend.dto.CreateParkingAreaDTO;
 import pw.react.backend.dto.CreateParkingSpotDTO;
 import pw.react.backend.exceptions.ModelAlreadyExistsException;
 import pw.react.backend.exceptions.ModelValidationException;
@@ -52,14 +51,15 @@ public class ParkingSpotMainService implements ParkingSpotService {
         if (parkingSpotRepository.existsByParkingAreaAndSpotNumber(pa, parkingSpotDTO.spotNumber())) {
             throw new ModelAlreadyExistsException("A parking spot with the specified spot number already exists");
         }
-        return parkingSpotRepository.save(CreateParkingSpotDTO.toModel(parkingSpotDTO, pa));
+        return parkingSpotRepository.save(parkingSpotDTO.toModel(pa));
     }
 
     @Override
     public Optional<ParkingSpot> updateParkingSpot(Long id, ParkingSpot parkingSpot) {
         if (parkingSpotRepository.findById(id).isPresent()) {
             ParkingSpot ps = new ParkingSpot();
-            ps.setAvailable(parkingSpot.isAvailable());
+            ps.setId(id);
+            ps.setIsAvailable(parkingSpot.getIsAvailable());
             ps.setSpotNumber(parkingSpot.getSpotNumber());
             ps.setParkingArea(parkingSpot.getParkingArea());
             ps = parkingSpotRepository.save(ps);
@@ -80,7 +80,7 @@ public class ParkingSpotMainService implements ParkingSpotService {
     @Override
     public List<ParkingSpot> getParkingSpotsByParkingAreaId(Long parkingAreaId) {
         if (parkingAreaRepository.existsById(parkingAreaId)) {
-            return parkingSpotRepository.findParkingSpotsByParkingAreaId(parkingAreaId);
+            return parkingSpotRepository.findParkingSpotsByParkingAreaIdAndIsAvailableTrue(parkingAreaId);
         }
         throw new ModelValidationException("Parking area with id " + parkingAreaId + " not found");
     }

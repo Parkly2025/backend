@@ -1,8 +1,6 @@
 package pw.react.backend.models;
 
 import jakarta.persistence.*;
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 @Entity
 @Table
@@ -28,6 +26,6 @@ public class ParkingSpot {
     public void setSpotNumber(String spotNumber) { this.spotNumber = spotNumber; }
     public ParkingArea getParkingArea() { return parkingArea; }
     public void setParkingArea(ParkingArea parkingArea) {this.parkingArea = parkingArea;}
-    public boolean isAvailable() { return isAvailable; }
-    public void setAvailable(boolean available) { this.isAvailable = available; }
+    public boolean getIsAvailable() { return isAvailable; }
+    public void setIsAvailable(boolean available) { this.isAvailable = available; }
 }

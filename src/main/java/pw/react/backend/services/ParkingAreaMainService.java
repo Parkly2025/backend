@@ -68,9 +68,9 @@ public class ParkingAreaMainService implements ParkingAreaService {
             pa.setName(parkingArea.getName());
             pa.setAddress(parkingArea.getAddress());
             pa.setCity(parkingArea.getCity());
-            pa.setNumParkingSpots(parkingArea.getNumParkingSpots());
-            pa.setMaxNumParkingSpots(parkingArea.getMaxNumParkingSpots());
             pa.setHourlyRate(parkingArea.getHourlyRate());
+            pa.setLongitude(parkingArea.getLongitude());
+            pa.setLatitude(parkingArea.getLatitude());
 
             parkingAreaRepository.save(pa);
             return Optional.of(pa);

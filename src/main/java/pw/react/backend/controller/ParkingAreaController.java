@@ -19,6 +19,8 @@ import pw.react.backend.dto.CreateParkingAreaDTO;
 import pw.react.backend.exceptions.ModelAlreadyExistsException;
 import pw.react.backend.models.ParkingArea;
 import pw.react.backend.services.ParkingAreaService;
+import pw.react.backend.utils.ProtectedEndpoint;
+import pw.react.backend.utils.Utils;
 
 import java.util.Optional;
 
@@ -74,9 +76,13 @@ public class ParkingAreaController {
             @ApiResponse(responseCode = "400", description = "Bad request - Parking area already exists")
     })
     @PostMapping
-    public ResponseEntity<?> createParkingArea(@Parameter(description = "Parking area DTO object to create", required = true, schema = @Schema(implementation = CreateParkingAreaDTO.class)) @RequestBody CreateParkingAreaDTO parkingAreaDTO) {
+    @ProtectedEndpoint
+    public ResponseEntity<?> createParkingArea(@Parameter(description = "Parking area DTO object to create", required = true, schema = @Schema(implementation = CreateParkingAreaDTO.class)) @RequestBody CreateParkingAreaDTO parkingAreaDTO,
+                                               @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdmin(userRole))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         try {
-            ParkingArea savedParkingArea = parkingAreaService.createParkingArea(CreateParkingAreaDTO.toModel(parkingAreaDTO));
+            ParkingArea savedParkingArea = parkingAreaService.createParkingArea(parkingAreaDTO.toModel());
             return ResponseEntity.status(HttpStatus.CREATED).body(savedParkingArea);
         } catch (ModelAlreadyExistsException e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -90,9 +96,13 @@ public class ParkingAreaController {
             @ApiResponse(responseCode = "404", description = "Parking area not found")
     })
     @PutMapping("/{id}")
+    @ProtectedEndpoint
     public ResponseEntity<ParkingArea> updateParkingArea(
             @Parameter(description = "ID of the parking area to update", required = true) @PathVariable Long id,
-            @Parameter(description = "Updated parking area object", required = true, schema = @Schema(implementation = ParkingArea.class)) @RequestBody ParkingArea updatedParkingArea) {
+            @Parameter(description = "Updated parking area object", required = true, schema = @Schema(implementation = ParkingArea.class)) @RequestBody ParkingArea updatedParkingArea,
+            @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdmin(userRole))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         Optional<ParkingArea> pa = parkingAreaService.updateParkingArea(id, updatedParkingArea);
         return pa.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
@@ -103,7 +113,11 @@ public class ParkingAreaController {
             @ApiResponse(responseCode = "404", description = "Parking area not found")
     })
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteParkingArea(@Parameter(description = "ID of the parking area to delete", required = true) @PathVariable Long id) {
+    @ProtectedEndpoint
+    public ResponseEntity<Void> deleteParkingArea(@Parameter(description = "ID of the parking area to delete", required = true) @PathVariable Long id,
+                                                  @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdmin(userRole))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         if (parkingAreaService.deleteParkingArea(id)) {
             return ResponseEntity.noContent().build();
         }

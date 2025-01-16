@@ -14,5 +14,5 @@ public interface ParkingSpotRepository extends JpaRepository<ParkingSpot, Long>,
     List<ParkingSpot> findByParkingArea(ParkingArea parkingArea);
     ParkingSpot findBySpotNumberAndParkingArea(String spotNumber, ParkingArea parkingArea);
     Boolean existsByParkingAreaAndSpotNumber(ParkingArea parkingArea, String spotNumber);
-    List<ParkingSpot> findParkingSpotsByParkingAreaId(Long parkingAreaId);
+    List<ParkingSpot> findParkingSpotsByParkingAreaIdAndIsAvailableTrue(Long parkingAreaId);
 }

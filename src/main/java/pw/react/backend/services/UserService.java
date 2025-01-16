@@ -4,6 +4,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import pw.react.backend.dto.CreateUserDTO;
+import pw.react.backend.dto.LoginDTO;
 import pw.react.backend.models.User;
 
 import java.util.Collection;
@@ -16,4 +17,5 @@ public interface UserService {
     User create(CreateUserDTO userDTO);
     Optional<User> update(Long id, User updatedUser);
     void delete(Long id);
+    User login(LoginDTO loginDTO);
 }

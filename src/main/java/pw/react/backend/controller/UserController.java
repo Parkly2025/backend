@@ -2,21 +2,27 @@ package pw.react.backend.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.headers.Header;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.Page;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pw.react.backend.dto.CreateUserDTO;
+import pw.react.backend.dto.LoginDTO;
 import pw.react.backend.exceptions.ModelAlreadyExistsException;
 import pw.react.backend.exceptions.ModelNotFoundException;
 import pw.react.backend.exceptions.ModelValidationException;
 import pw.react.backend.models.User;
 import pw.react.backend.services.UserService;
+import pw.react.backend.utils.ProtectedEndpoint;
+import pw.react.backend.utils.Utils;
 
 import java.util.Optional;
 
@@ -57,7 +63,7 @@ public class UserController {
             @ApiResponse(responseCode = "404", description = "User not found")
     })
     @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@Parameter(description = "ID of the user to retrieve", required = true) @PathVariable Long id) {
+    public ResponseEntity<?> getUserById(@Parameter(description = "ID of the user to retrieve", required = true) @PathVariable Long id) {
         Optional<User> user = userService.findById(id);
         return user.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
@@ -87,9 +93,13 @@ public class UserController {
             @ApiResponse(responseCode = "404", description = "User not found")
     })
     @PutMapping("/{id}")
+    @ProtectedEndpoint
     public ResponseEntity<?> updateUser(
             @Parameter(description = "ID of the user to update", required = true) @PathVariable Long id,
-            @Parameter(description = "Updated user object", required = true, schema = @Schema(implementation = User.class)) @RequestBody User updatedUser) {
+            @Parameter(description = "Updated user object", required = true, schema = @Schema(implementation = User.class)) @RequestBody User updatedUser,
+            @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdminOrUser(userRole))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         try {
             return new ResponseEntity<>(userService.update(id, updatedUser), HttpStatus.OK);
         } catch (ModelValidationException e) {
@@ -105,12 +115,44 @@ public class UserController {
             @ApiResponse(responseCode = "404", description = "User not found")
     })
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUser(@Parameter(description = "ID of the user to delete", required = true) @PathVariable Long id) {
+    @ProtectedEndpoint
+    public ResponseEntity<Void> deleteUser(@Parameter(description = "ID of the user to delete", required = true) @PathVariable Long id,
+                                           @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdminOrUser(userRole))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         try {
-            userService.delete(id);
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+                userService.delete(id);
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            } catch (ModelNotFoundException e) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+        }
+
+    @Operation(summary = "Login user", description = "Authenticates a user and sets a cookie containing the user's role.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Successful login",
+                    headers = @Header(
+                            name = HttpHeaders.SET_COOKIE,
+                            description = "Cookie containing the user's role. Example: userRole=ADMIN; Max-Age=36000",
+                            schema = @Schema(type = "string")
+                    )
+            ),
+            @ApiResponse(responseCode = "400", description = "Bad request. User not found",
+                    content = @Content(schema = @Schema(type = "string"))
+            )
+    })
+    @PostMapping("/login")
+    public ResponseEntity<?> loginUser(@RequestBody LoginDTO loginDTO) {
+        try {
+            User user = userService.login(loginDTO);
+            ResponseCookie cookie = ResponseCookie.from("userRole", user.getRole().name()).
+                    maxAge(10 * 60 * 60).path("/").httpOnly(true).build();
+
+            return ResponseEntity.ok()
+                    .header(HttpHeaders.SET_COOKIE, cookie.toString())
+                    .build();
         } catch (ModelNotFoundException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
 }

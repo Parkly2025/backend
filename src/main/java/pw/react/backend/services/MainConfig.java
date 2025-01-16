@@ -21,7 +21,6 @@ import static java.util.stream.Collectors.toSet;
         NonBatchConfig.class, OpenApiConfig.class
 })
 public class MainConfig {
-
     private static final Logger log = LoggerFactory.getLogger(MainConfig.class);
     private static final Map<String, String> envPropertiesMap = System.getenv();
 

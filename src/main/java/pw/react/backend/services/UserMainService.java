@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import pw.react.backend.dao.UserRepository;
 import pw.react.backend.dto.CreateUserDTO;
+import pw.react.backend.dto.LoginDTO;
 import pw.react.backend.exceptions.ModelAlreadyExistsException;
 import pw.react.backend.exceptions.ModelNotFoundException;
 import pw.react.backend.exceptions.ModelValidationException;
@@ -74,6 +75,7 @@ public class UserMainService implements UserService {
         user.setEmail(userDTO.email());
         user.setFirstName(userDTO.firstName());
         user.setLastName(userDTO.username());
+        user.setRole(userDTO.role());
         return userRepository.save(user);
     }
 
@@ -93,6 +95,7 @@ public class UserMainService implements UserService {
         user.setEmail(updatedUser.getEmail());
         user.setFirstName(updatedUser.getFirstName());
         user.setLastName(updatedUser.getLastName());
+        user.setRole(updatedUser.getRole());
 
         return Optional.of(userRepository.save(user));
     }
@@ -103,5 +106,14 @@ public class UserMainService implements UserService {
             throw new ModelNotFoundException("User with id " + id + " does not exist");
         }
         userRepository.deleteById(id);
+    }
+
+    @Override
+    public User login(LoginDTO loginDTO) {
+        Optional<User> user = userRepository.findByUsername(loginDTO.username());
+        if (user.isEmpty()) {
+            throw new ModelNotFoundException("User with username " + loginDTO.username() + " does not exist");
+        }
+        return user.get();
     }
 }

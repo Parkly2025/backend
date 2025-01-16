@@ -15,13 +15,13 @@ public record CreateReservationDTO(Long parkingSpotId, Long userId, LocalDateTim
                 reservation.getEndTime(), reservation.getTotalCost());
     }
 
-    public static Reservation toModel(CreateReservationDTO createReservationDTO, ParkingSpot parkingSpot, User user) {
+    public Reservation toModel(ParkingSpot parkingSpot, User user) {
         Reservation reservation = new Reservation();
         reservation.setParkingSpot(parkingSpot);
         reservation.setUser(user);
-        reservation.setStartTime(createReservationDTO.startTime());
-        reservation.setEndTime(createReservationDTO.endTime());
-        reservation.setTotalCost(createReservationDTO.totalCost());
+        reservation.setStartTime(startTime);
+        reservation.setEndTime(endTime);
+        reservation.setTotalCost(totalCost);
         return reservation;
     }
 }

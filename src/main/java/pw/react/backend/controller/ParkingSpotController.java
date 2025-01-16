@@ -21,6 +21,8 @@ import pw.react.backend.exceptions.ModelAlreadyExistsException;
 import pw.react.backend.exceptions.ModelValidationException;
 import pw.react.backend.models.ParkingSpot;
 import pw.react.backend.services.ParkingSpotService;
+import pw.react.backend.utils.ProtectedEndpoint;
+import pw.react.backend.utils.Utils;
 
 import java.util.List;
 import java.util.Optional;
@@ -43,7 +45,7 @@ public class ParkingSpotController {
                             schema = @Schema(implementation = Page.class))),
             @ApiResponse(responseCode = "400", description = "Invalid page number or size")
     })
-    @GetMapping("/pages/{page}")
+    @GetMapping("/page/{page}")
     public Page<ReturnParkingSpotDTO> getAllParkingSpots(
             @Parameter(description = "Page number (0-based)", required = true) @PathVariable int page,
             @Parameter(description = "Page size") @RequestParam(value = "size", required = false, defaultValue = "10") int size,
@@ -66,7 +68,7 @@ public class ParkingSpotController {
                             schema = @Schema(implementation = List.class))),
             @ApiResponse(responseCode = "400", description = "Invalid Parking area id")
     })
-    @GetMapping("/pages/pa")
+    @GetMapping("/pa")
     public ResponseEntity<?> getAllParkingSpots(
             @Parameter(description = "Parking Area id") @RequestParam(value = "paId", required = true) Long paId)
     {
@@ -100,7 +102,11 @@ public class ParkingSpotController {
             @ApiResponse(responseCode = "400", description = "Bad request - Parking spot already exists or validation failed", content = @Content(mediaType = "application/json", schema = @Schema(implementation = String.class))) //Schema for the error message
     })
     @PostMapping
-    public ResponseEntity<?> createParkingSpot(@Parameter(description = "Parking spot DTO object to create", required = true, schema = @Schema(implementation = CreateParkingSpotDTO.class)) @RequestBody CreateParkingSpotDTO createParkingSpotDTO) {
+    @ProtectedEndpoint
+    public ResponseEntity<?> createParkingSpot(@Parameter(description = "Parking spot DTO object to create", required = true, schema = @Schema(implementation = CreateParkingSpotDTO.class)) @RequestBody CreateParkingSpotDTO createParkingSpotDTO,
+                                               @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdmin(userRole))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         try {
             ParkingSpot savedParkingSpot = parkingSpotService.createParkingSpot(createParkingSpotDTO);
             return ResponseEntity.status(HttpStatus.CREATED).body(ReturnParkingSpotDTO.fromModel(savedParkingSpot));
@@ -117,7 +123,11 @@ public class ParkingSpotController {
             @ApiResponse(responseCode = "400", description = "Bad Request - Validation errors", content = @Content(mediaType = "application/json", schema = @Schema(implementation = String.class)))
     })
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateParkingSpot(@Parameter(description = "ID of the parking spot to update", required = true) @PathVariable Long id, @Parameter(description = "Updated parking spot object", required = true, schema = @Schema(implementation = ParkingSpot.class)) @RequestBody ParkingSpot updatedParkingSpot) {
+    @ProtectedEndpoint
+    public ResponseEntity<?> updateParkingSpot(@Parameter(description = "ID of the parking spot to update", required = true) @PathVariable Long id, @Parameter(description = "Updated parking spot object", required = true, schema = @Schema(implementation = ParkingSpot.class)) @RequestBody ParkingSpot updatedParkingSpot,
+                                               @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdminOrUser(userRole))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         Optional<ParkingSpot> ps = parkingSpotService.updateParkingSpot(id, updatedParkingSpot);
         if (ps.isPresent()) {
             return ResponseEntity.ok(ReturnParkingSpotDTO.fromModel(ps.get()));
@@ -131,7 +141,11 @@ public class ParkingSpotController {
             @ApiResponse(responseCode = "404", description = "Parking spot not found")
     })
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteParkingSpot(@Parameter(description = "ID of the parking spot to delete", required = true) @PathVariable Long id) {
+    @ProtectedEndpoint
+    public ResponseEntity<Void> deleteParkingSpot(@Parameter(description = "ID of the parking spot to delete", required = true) @PathVariable Long id,
+                                                  @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdmin(userRole))
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         if (parkingSpotService.deleteParkingSpot(id)) {
             return ResponseEntity.noContent().build();
         }

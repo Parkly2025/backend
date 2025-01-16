@@ -25,7 +25,7 @@ public class ReservationMainService implements ReservationService {
     private final UserService userService;
     private final ParkingSpotService parkingSpotService;
 
-    public ReservationMainService(ReservationRepository reservationRepository, @Qualifier("userService") UserService userService, @Qualifier("parkingSpotService") ParkingSpotService parkingSpotService) {
+    public ReservationMainService(ReservationRepository reservationRepository, UserService userService, ParkingSpotService parkingSpotService) {
         this.reservationRepository = reservationRepository;
         this.userService = userService;
         this.parkingSpotService = parkingSpotService;
@@ -59,6 +59,9 @@ public class ReservationMainService implements ReservationService {
         if (parkingSpot.isEmpty()) {
             throw new ModelValidationException("ParkingSpot not found");
         }
+        if (!parkingSpot.get().getIsAvailable()) {
+            throw new ModelValidationException("ParkingSpot is not available");
+        }
         if (reservationRepository.existsByUserAndParkingSpotAndStartTimeAndEndTime(user.get(),
                 parkingSpot.get(), reservationDTO.startTime(), reservationDTO.endTime()))
         {
@@ -70,13 +73,32 @@ public class ReservationMainService implements ReservationService {
         reservation.setStartTime(reservationDTO.startTime());
         reservation.setEndTime(reservationDTO.endTime());
         reservation.setTotalCost(reservationDTO.totalCost());
+        ParkingSpot ps = parkingSpot.get();
+        ps.setIsAvailable(false);
+        parkingSpotService.updateParkingSpot(ps.getId(), ps);
         return reservationRepository.save(reservation);
     }
 
     @Override
-    public Optional<Reservation> update(Long id, Reservation updatedReservation) {
-        // TODO: do this (update action)
-        throw new NotImplementedException();
+    public Reservation update(Long id, CreateReservationDTO reservationDTO) {
+        Optional<Reservation> reservation = reservationRepository.findById(id);
+        if (reservation.isEmpty()) {
+            throw new ModelNotFoundException("Reservation not found");
+        }
+        Optional<User> user = userService.findById(reservationDTO.userId());
+        if (user.isEmpty()) {
+            throw new ModelValidationException("User not found");
+        }
+        Optional<ParkingSpot> parkingSpot = parkingSpotService.getParkingSpot(reservationDTO.parkingSpotId());
+        if (parkingSpot.isEmpty()) {
+            throw new ModelValidationException("ParkingSpot not found");
+        }
+        if (reservationRepository.existsByUserAndParkingSpotAndStartTimeAndEndTime(user.get(),
+                parkingSpot.get(), reservationDTO.startTime(), reservationDTO.endTime()))
+        {
+            throw new ModelAlreadyExistsException("Reservation already exists");
+        }
+        return reservationRepository.save(reservationDTO.toModel(parkingSpot.get(), user.get()));
     }
 
     @Override
@@ -84,6 +106,23 @@ public class ReservationMainService implements ReservationService {
         if (!reservationRepository.existsById(id)) {
             throw new ModelValidationException("Reservation not found");
         }
+        Reservation reservation = reservationRepository.findById(id).get();
+        ParkingSpot ps = reservation.getParkingSpot();
+        ps.setIsAvailable(true);
+        parkingSpotService.updateParkingSpot(ps.getId(), ps);
         reservationRepository.deleteById(id);
+    }
+
+    @Override
+    public Page<Reservation> findByUserId(int page, int size, String sortDirection, Long userId) {
+        Sort sort = Sort.by("startTime", "endTime");
+        if (sortDirection.equalsIgnoreCase("desc")) {
+            sort = sort.descending();
+        } else if (sortDirection.equalsIgnoreCase("asc")) {
+            sort = sort.ascending();
+        }
+
+        Pageable pageable = PageRequest.of(page, size, sort);
+        return reservationRepository.findByUserId(userId, pageable);
     }
 }
