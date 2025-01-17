@@ -37,46 +37,59 @@ public class UserController {
         this.userService = userService;
     }
 
-    @Operation(summary = "Get all users paginated", description = "Retrieves a paginated list of users.")
+    @GetMapping("/page/{page}")
+    @ProtectedEndpoint
+    @Operation(summary = "Get all users (paginated - Admin Only)", description = "Retrieves a paginated list of users. Requires Admin role.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successful retrieval of users",
                     content = @Content(mediaType = "application/json",
                             schema = @Schema(implementation = Page.class))),
-            @ApiResponse(responseCode = "400", description = "Invalid page number or size")
+            @ApiResponse(responseCode = "403", description = "Forbidden - Insufficient privileges (Admin role required)")
     })
-    @GetMapping("/page/{page}")
-    public Page<User> getAllUsers(
-        @Parameter(description = "Page number (0-based)", required = true) @PathVariable int page,
-        @Parameter(description = "Page size") @RequestParam(value = "size", required = false, defaultValue = "10") int size,
-        @Parameter(description = "Sort direction (asc or desc)") @RequestParam(value = "sortDirection", required = false, defaultValue = "asc") String sortDirection,
-        @Parameter(description = "Search query") @RequestParam(value = "searchQuery", required = false) String searchQuery,
-        /*TODO: list User properties allowed to be searched on (e.g. username, firstName) ...*/
-        @Parameter(description = "Search query property / parameter") @RequestParam(value = "searchQueryParameter", required = false) String searchQueryParameter)
-    {
-        return userService.findAll(page, size, sortDirection, searchQuery, searchQueryParameter);
+    public ResponseEntity<?> getAllUsers(
+            @Parameter(description = "Page number (starting from 0)", required = true) @PathVariable int page,
+            @Parameter(description = "Number of users per page.") @RequestParam(value = "size", required = false, defaultValue = "10") int size,
+            @Parameter(description = "Sorting direction (asc or desc). Allowed: {\"asc\", \"desc\"}.") @RequestParam(value = "sortDirection", required = false, defaultValue = "asc") String sortDirection,
+            @Parameter(description = "Search query string") @RequestParam(value = "searchQuery", required = false) String searchQuery,
+            @Parameter(description = "Specific parameter to search within. Allowed: ['username', 'email', 'firstName', 'lastName', 'fullName']") @RequestParam(value = "searchQueryParameter", required = false) String searchQueryParameter,
+            @Parameter(description = "Cookie containing User role.") @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdmin(userRole)) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+        return ResponseEntity.ok(userService.findAll(page, size, sortDirection, searchQuery, searchQueryParameter));
     }
 
-    @Operation(summary = "Get user by ID", description = "Retrieves a user by their ID.")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successful retrieval of user",
-                    content = @Content(mediaType = "application/json", schema = @Schema(implementation = User.class))),
-            @ApiResponse(responseCode = "404", description = "User not found")
-    })
+
     @GetMapping("/{id}")
-    public ResponseEntity<?> getUserById(@Parameter(description = "ID of the user to retrieve", required = true) @PathVariable Long id) {
+    @ProtectedEndpoint
+    @Operation(summary = "Get user by ID", description = "Retrieves a user by its ID. Requires Admin or User role.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "User found", content = @Content(mediaType = "application/json", schema = @Schema(implementation = User.class))),
+            @ApiResponse(responseCode = "403", description = "Forbidden - Insufficient privileges (Admin or User role required)"),
+            @ApiResponse(responseCode = "404", description = "Not Found - User with the specified ID does not exist")
+    })
+    public ResponseEntity<?> getUserById(
+            @Parameter(description = "ID of the user to retrieve", required = true) @PathVariable Long id,
+            @Parameter(description = "Cookie containing User role.") @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdminOrUser(userRole)) {
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
         Optional<User> user = userService.findById(id);
         return user.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    @Operation(summary = "Create a new user", description = "Creates a new user.")
+
+    @PostMapping
+    @Operation(summary = "Create a new user", description = "Creates a new user based on the provided data.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "User created successfully",
                     content = @Content(mediaType = "application/json", schema = @Schema(implementation = User.class))),
-            @ApiResponse(responseCode = "400", description = "Bad request - User already exists or invalid input")
+            @ApiResponse(responseCode = "400", description = "Bad Request - Invalid user data or user already exists",
+                    content = @Content(mediaType = "text/plain"))
     })
-    @PostMapping
-    public ResponseEntity<?> createUser(@Parameter(description = "User object to create", required = true, schema = @Schema(implementation = CreateUserDTO.class)) @RequestBody CreateUserDTO userDTO) {
+    public ResponseEntity<?> createUser(
+            @Parameter(description = "User object to create", required = true, schema = @Schema(implementation = CreateUserDTO.class)) @RequestBody CreateUserDTO userDTO) {
         try {
             User savedUser = userService.create(userDTO);
             return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
@@ -85,19 +98,23 @@ public class UserController {
         }
     }
 
-    @Operation(summary = "Update an existing user", description = "Updates an existing user by their ID.")
+
+    @PutMapping("/{id}")
+    @ProtectedEndpoint
+    @Operation(summary = "Update an existing user", description = "Updates an existing user based on the provided ID and data. Requires Admin or User role.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "User updated successfully",
                     content = @Content(mediaType = "application/json", schema = @Schema(implementation = User.class))),
-            @ApiResponse(responseCode = "400", description = "Bad request - User already exists, invalid input, or invalid ID"),
-            @ApiResponse(responseCode = "404", description = "User not found")
+            @ApiResponse(responseCode = "400", description = "Bad Request - Invalid user data or validation error",
+                    content = @Content(mediaType = "text/plain")),
+            @ApiResponse(responseCode = "403", description = "Forbidden - Insufficient privileges (Admin or User role required)"),
+            @ApiResponse(responseCode = "404", description = "Not Found - User with the specified ID does not exist",
+                    content = @Content(mediaType = "text/plain"))
     })
-    @PutMapping("/{id}")
-    @ProtectedEndpoint
     public ResponseEntity<?> updateUser(
             @Parameter(description = "ID of the user to update", required = true) @PathVariable Long id,
             @Parameter(description = "Updated user object", required = true, schema = @Schema(implementation = User.class)) @RequestBody User updatedUser,
-            @CookieValue(value = "userRole", required = false) String userRole) {
+            @Parameter(description = "Cookie containing User role.") @CookieValue(value = "userRole", required = false) String userRole) {
         if (!Utils.roleAdminOrUser(userRole))
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         try {
@@ -109,44 +126,45 @@ public class UserController {
         }
     }
 
-    @Operation(summary = "Delete a user", description = "Deletes a user by their ID.")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "204", description = "User deleted successfully"),
-            @ApiResponse(responseCode = "404", description = "User not found")
-    })
+
     @DeleteMapping("/{id}")
     @ProtectedEndpoint
-    public ResponseEntity<Void> deleteUser(@Parameter(description = "ID of the user to delete", required = true) @PathVariable Long id,
-                                           @CookieValue(value = "userRole", required = false) String userRole) {
+    @Operation(summary = "Delete a user", description = "Deletes a user based on the provided ID. Requires Admin or User role.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "User deleted successfully"),
+            @ApiResponse(responseCode = "403", description = "Forbidden - Insufficient privileges (Admin or User role required)"),
+            @ApiResponse(responseCode = "404", description = "Not Found - User with the specified ID does not exist")
+    })
+    public ResponseEntity<Void> deleteUser(
+            @Parameter(description = "ID of the user to delete", required = true) @PathVariable Long id,
+            @Parameter(description = "Cookie containing User role.") @CookieValue(value = "userRole", required = false) String userRole) {
         if (!Utils.roleAdminOrUser(userRole))
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         try {
-                userService.delete(id);
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            } catch (ModelNotFoundException e) {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-            }
+            userService.delete(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (ModelNotFoundException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
 
+
+    @PostMapping("/login")
     @Operation(summary = "Login user", description = "Authenticates a user and sets a cookie containing the user's role.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successful login",
-                    headers = @Header(
+            @ApiResponse(responseCode = "200", description = "Login successful. Cookie set.",
+                    headers = @io.swagger.v3.oas.annotations.headers.Header(
                             name = HttpHeaders.SET_COOKIE,
-                            description = "Cookie containing the user's role. Example: userRole=ADMIN; Max-Age=36000",
-                            schema = @Schema(type = "string")
-                    )
-            ),
-            @ApiResponse(responseCode = "400", description = "Bad request. User not found",
-                    content = @Content(schema = @Schema(type = "string"))
-            )
+                            description = "Cookie containing the user's role.",
+                            schema = @io.swagger.v3.oas.annotations.media.Schema(type = "string"))), // Document the Set-Cookie header
+            @ApiResponse(responseCode = "400", description = "Bad Request - Invalid credentials",
+                    content = @Content(mediaType = "text/plain"))
     })
-    @PostMapping("/login")
-    public ResponseEntity<?> loginUser(@RequestBody LoginDTO loginDTO) {
+    public ResponseEntity<?> loginUser(@Parameter(description = "Login credentials", required = true, schema = @io.swagger.v3.oas.annotations.media.Schema(implementation = LoginDTO.class)) @RequestBody LoginDTO loginDTO) {
         try {
             User user = userService.login(loginDTO);
-            ResponseCookie cookie = ResponseCookie.from("userRole", user.getRole().name()).
-                    maxAge(10 * 60 * 60).path("/").httpOnly(true).build();
+            ResponseCookie cookie = ResponseCookie.from("userRole", user.getRole().name())
+                    .maxAge(10 * 60 * 60).path("/").httpOnly(true).build();
 
             return ResponseEntity.ok()
                     .header(HttpHeaders.SET_COOKIE, cookie.toString())

@@ -47,11 +47,16 @@ public class ReservationController {
 
 
     @GetMapping("/page/{page}")
-    public Page<ReturnReservationDTO> getAllReservations(
+    @ProtectedEndpoint
+    public ResponseEntity<?> getAllReservations(
             @Parameter(description = "Page number (0-based)", required = true) @PathVariable int page,
             @Parameter(description = "Page size") @RequestParam(value = "size", required = false, defaultValue = "10") int size,
-            @Parameter(description = "Sort direction (asc or desc)") @RequestParam(value = "sortDirection", required = false, defaultValue = "asc") String sortDirection) {
-        return reservationService.findAll(page, size, sortDirection).map(ReturnReservationDTO::fromModel);
+            @Parameter(description = "Sort direction (asc or desc)") @RequestParam(value = "sortDirection", required = false, defaultValue = "asc") String sortDirection,
+            @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdmin(userRole)) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+        return ResponseEntity.ok(reservationService.findAll(page, size, sortDirection).map(ReturnReservationDTO::fromModel));
     }
 
 
