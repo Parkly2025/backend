@@ -49,6 +49,7 @@ META-INF/spring-configuration-metadata.json
 pw/react/backend/utils/JsonDateSerializer.class
 pw/react/backend/dao/ReservationRepository.class
 pw/react/backend/models/ParkingSpot.class
+pw/react/backend/dto/ReturnReservationDTO.class
 pw/react/backend/specifications/ParkingAreaSpecification.class
 pw/react/backend/services/MainConfig.class
 pw/react/backend/dto/LoginDTO.class

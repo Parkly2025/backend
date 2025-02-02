@@ -206,3 +206,178 @@ Caused by: java.lang.ClassNotFoundException: pw.react.backend.services.Reservati
 2025-02-02 14:36:49 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
 2025-02-02 14:36:49 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 2 ms
 2025-02-02 14:37:15 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-02 16:07:25 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-02 16:07:25 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-02 16:07:25 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-02 16:07:25 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-02-02 16:07:25 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 5000 (http)
+2025-02-02 16:07:25 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 591 ms
+2025-02-02 16:07:26 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-02 16:07:28 [ERROR] [restartedMain] tainerEntityManagerFactoryBean: Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'backend'] [n/a]
+2025-02-02 16:07:28 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'backend'] [n/a]
+2025-02-02 16:07:28 [ERROR] [restartedMain] amework.boot.SpringApplication: Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'backend'] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at pw.react.backend.BackendApplication.main(BackendApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'backend'] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 18 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'backend'] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:66)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:240)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:119)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 22 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'backend'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:845)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 43 common frames omitted
+2025-02-02 16:08:42 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-02 16:08:42 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-02 16:08:42 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-02 16:08:42 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2025-02-02 16:08:42 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 5000 (http)
+2025-02-02 16:08:42 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 532 ms
+2025-02-02 16:08:42 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-02 16:08:44 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-02 16:08:45 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 2 endpoints beneath base path '/actuator'
+2025-02-02 16:08:45 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-02-02 16:08:45 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-02-02 16:08:45 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-02 16:08:45 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5000 or configure this application to listen on another port.
+
+2025-02-02 16:09:06 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-02 16:09:06 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-02 16:09:06 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-02 16:09:06 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-02-02 16:09:07 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 5000 (http)
+2025-02-02 16:09:07 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 559 ms
+2025-02-02 16:09:07 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-02 16:09:08 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-02 16:09:08 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 2 endpoints beneath base path '/actuator'
+2025-02-02 16:09:08 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-02-02 16:09:08 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-02-02 16:09:08 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-02 16:09:08 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5000 or configure this application to listen on another port.
+
+2025-02-02 16:10:45 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-02 16:10:45 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-02 16:10:45 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-02 16:10:45 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2025-02-02 16:10:46 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 5000 (http)
+2025-02-02 16:10:46 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 632 ms
+2025-02-02 16:10:46 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-02 16:10:47 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-02 16:10:47 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 2 endpoints beneath base path '/actuator'
+2025-02-02 16:10:47 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-02-02 16:10:47 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-02-02 16:10:47 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-02 16:10:47 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 5000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 5000 or configure this application to listen on another port.
+
+2025-02-02 16:11:15 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-02 16:11:15 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-02 16:11:15 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-02 16:11:15 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2025-02-02 16:11:15 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-02-02 16:11:15 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 593 ms
+2025-02-02 16:11:16 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-02 16:11:17 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-02 16:11:17 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 2 endpoints beneath base path '/actuator'
+2025-02-02 16:11:17 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-02-02 16:11:17 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-02-02 16:11:22 [INFO ] [http-nio-8080-exec-2] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-02-02 16:11:22 [INFO ] [http-nio-8080-exec-2] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2025-02-02 16:11:36 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'

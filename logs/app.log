@@ -33,3 +33,14 @@
 2025-02-02 14:35:02 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
 2025-02-02 14:35:02 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
 2025-02-02 14:35:03 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 0.526 seconds (process running for 4791.66)
+2025-02-02 16:07:25 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 1436 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 16:07:25 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "azure-mysql"
+2025-02-02 16:08:42 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 1464 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 16:08:42 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "azure-mysql"
+2025-02-02 16:09:06 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 1469 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 16:09:06 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "azure-mysql"
+2025-02-02 16:10:45 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 1622 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 16:10:45 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "azure-mysql"
+2025-02-02 16:11:15 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 1632 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 16:11:15 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "azure-mysql"
+2025-02-02 16:11:17 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 2.716 seconds (process running for 3.027)
