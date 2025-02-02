@@ -48,11 +48,19 @@ public class ReservationController {
 
     @GetMapping("/page/{page}")
     @ProtectedEndpoint
+    @Operation(summary = "Get all reservations",
+            description = "Retrieves a paginated list of reservations. Requires admin role.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Successful retrieval of reservations", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Page.class))),
+            @ApiResponse(responseCode = "403", description = "Forbidden - insufficient privileges")
+    })
     public ResponseEntity<?> getAllReservations(
-            @Parameter(description = "Page number (0-based)", required = true) @PathVariable int page,
-            @Parameter(description = "Page size") @RequestParam(value = "size", required = false, defaultValue = "10") int size,
-            @Parameter(description = "Sort direction (asc or desc)") @RequestParam(value = "sortDirection", required = false, defaultValue = "asc") String sortDirection,
-            @CookieValue(value = "userRole", required = false) String userRole) {
+            @Parameter(description = "Page number (0-based)", required = true, example = "0") @PathVariable int page,
+            @Parameter(description = "Page size", example = "10") @RequestParam(value = "size", required = false, defaultValue = "10") int size,
+            @Parameter(description = "Sort direction (asc or desc)", example = "asc") @RequestParam(value = "sortDirection", required = false, defaultValue = "asc") String sortDirection,
+            @Parameter @CookieValue(value = "userRole", required = false) String userRole) {
+
+
         if (!Utils.roleAdmin(userRole)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
         }
@@ -62,36 +70,68 @@ public class ReservationController {
 
     @GetMapping("/user/{id}/page/{page}")
     @ProtectedEndpoint
-    public Page<ReturnReservationDTO> getAllUserReservations(
-            @PathVariable Long id,
-            @PathVariable int page,
-            @RequestParam(value = "size", required = false, defaultValue = "10") int size,
-            @RequestParam(value = "sortDirection", required = false, defaultValue = "asc") String sortDirection) {
-        return reservationService.findByUserId(page, size, sortDirection, id).map(ReturnReservationDTO::fromModel);
+    @Operation(summary = "Get reservations for a specific user",
+            description = "Retrieves a paginated list of reservations for a given user.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Successful retrieval of reservations", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Page.class))),
+            @ApiResponse(responseCode = "400", description = "Bad Request - invalid input parameters (e.g., invalid user ID, page number out of range)"),
+            @ApiResponse(responseCode = "400", description = "Forbidden - requires either Admin or User role"),
+    })
+    public ResponseEntity<?> getAllUserReservations(
+            @Parameter(description = "User ID", required = true, example = "123") @PathVariable Long id,
+            @Parameter(description = "Page number (0-based)", required = true, example = "0") @PathVariable int page,
+            @Parameter(description = "Page size", example = "10") @RequestParam(value = "size", required = false, defaultValue = "10") int size,
+            @Parameter(description = "Sort direction (asc or desc)", example = "asc") @RequestParam(value = "sortDirection", required = false, defaultValue = "asc") String sortDirection,
+            @CookieValue(value = "userRole", required = false) String userRole) {
+        if (!Utils.roleAdminOrUser(userRole)) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+        return ResponseEntity.ok(reservationService.findByUserId(page, size, sortDirection, id).map(ReturnReservationDTO::fromModel));
     }
 
     @GetMapping("/{id}")
     @ProtectedEndpoint
+    @Operation(summary = "Get reservation by ID",
+            description = "Retrieves a reservation by its ID. Requires admin or user role.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Successful retrieval of reservation", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ReturnReservationDTO.class))),
+            @ApiResponse(responseCode = "403", description = "Forbidden - insufficient privileges"),
+            @ApiResponse(responseCode = "404", description = "Not Found - reservation not found")
+    })
     public ResponseEntity<?> getReservationById(
-            @Parameter(description = "ID of the reservation to retrieve", required = true) @PathVariable Long id,
-            @CookieValue(value = "userRole", required = false) String userRole) {
-        if (!Utils.roleAdminOrUser(userRole))
+            @Parameter(description = "ID of the reservation to retrieve", required = true, example = "123") @PathVariable Long id,
+            @Parameter @CookieValue(value = "userRole", required = false) String userRole) {
+
+        if (!Utils.roleAdminOrUser(userRole)) {
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
+
         return reservationService.findById(id)
-                .map(ResponseEntity::ok)
+                .map(reservation -> ResponseEntity.ok(ReturnReservationDTO.fromModel(reservation))) // Convert to DTO here
                 .orElse(ResponseEntity.notFound().build());
     }
 
 
     @PostMapping
     @ProtectedEndpoint
+    @Operation(summary = "Create a new reservation",
+            description = "Creates a new reservation. Requires admin or user role.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Reservation created successfully", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ReturnReservationDTO.class))),
+            @ApiResponse(responseCode = "400", description = "Bad Request - invalid input data or validation errors", content = @Content(mediaType = "text/plain", schema = @Schema(type = "string"))), // Text plain for error message
+            @ApiResponse(responseCode = "403", description = "Forbidden - insufficient privileges")
+    })
     public ResponseEntity<?> createReservation(
             @Parameter(description = "Reservation object DTO to create", required = true, schema = @Schema(implementation = CreateReservationDTO.class)) @RequestBody CreateReservationDTO reservationDTO,
-            @CookieValue(value = "userRole", required = false) String userRole) {
-        if (!Utils.roleAdminOrUser(userRole))
+            @Parameter @CookieValue(value = "userRole", required = false) String userRole) {
+
+        if (!Utils.roleAdminOrUser(userRole)) {
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
+
         try {
-            return ResponseEntity.ok(ReturnReservationDTO.fromModel(reservationService.create(reservationDTO)));
+            Reservation createdReservation = reservationService.create(reservationDTO);
+            return ResponseEntity.ok(ReturnReservationDTO.fromModel(createdReservation));
         } catch (ModelValidationException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
@@ -100,11 +140,21 @@ public class ReservationController {
 
     @DeleteMapping("/{id}")
     @ProtectedEndpoint
+    @Operation(summary = "Delete a reservation",
+            description = "Deletes a reservation by its ID. Requires admin or user role.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Reservation deleted successfully"),
+            @ApiResponse(responseCode = "400", description = "Bad Request - invalid input data or validation errors", content = @Content(mediaType = "text/plain", schema = @Schema(type = "string"))), // Text plain for error message
+            @ApiResponse(responseCode = "403", description = "Forbidden - insufficient privileges")
+    })
     public ResponseEntity<?> deleteReservation(
-            @Parameter(description = "ID of the reservation to delete", required = true) @PathVariable Long id,
-            @CookieValue(value = "userRole", required = false) String userRole) {
-        if (!Utils.roleAdminOrUser(userRole))
+            @Parameter(description = "ID of the reservation to delete", required = true, example = "123") @PathVariable Long id,
+            @Parameter(hidden = true) @CookieValue(value = "userRole", required = false) String userRole) {
+
+        if (!Utils.roleAdminOrUser(userRole)) {
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
+
         try {
             reservationService.delete(id);
             return ResponseEntity.ok().build();
@@ -115,14 +165,25 @@ public class ReservationController {
 
     @PutMapping("/{id}")
     @ProtectedEndpoint
+    @Operation(summary = "Update a reservation",
+            description = "Updates an existing reservation. Requires admin or user role.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Reservation updated successfully", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ReturnReservationDTO.class))),
+            @ApiResponse(responseCode = "400", description = "Bad Request - invalid input data or validation errors", content = @Content(mediaType = "text/plain", schema = @Schema(type = "string"))),
+            @ApiResponse(responseCode = "403", description = "Forbidden - insufficient privileges")
+    })
     public ResponseEntity<?> updateReservation(
-            @PathVariable Long id, @RequestBody CreateReservationDTO reservationDTO,
-            @CookieValue(value = "userRole", required = false) String userRole) {
-        if (!Utils.roleAdminOrUser(userRole))
+            @Parameter(description = "ID of the reservation to update", required = true, example = "123") @PathVariable Long id,
+            @Parameter(description = "Reservation object DTO to update", required = true, schema = @Schema(implementation = CreateReservationDTO.class)) @RequestBody CreateReservationDTO reservationDTO,
+            @Parameter(hidden = true) @CookieValue(value = "userRole", required = false) String userRole) {
+
+        if (!Utils.roleAdminOrUser(userRole)) {
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
+
         try {
             Reservation reservation = reservationService.update(id, reservationDTO);
-            return ResponseEntity.ok().body(ReturnReservationDTO.fromModel(reservation));
+            return ResponseEntity.ok().body(ReturnReservationDTO.fromModel(reservation)); // Convert to DTO
         } catch (ModelValidationException | ModelNotFoundException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }

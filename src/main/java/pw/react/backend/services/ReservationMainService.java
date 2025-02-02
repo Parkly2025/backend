@@ -16,6 +16,8 @@ import pw.react.backend.models.ParkingSpot;
 import pw.react.backend.models.Reservation;
 import pw.react.backend.models.User;
 
+import java.math.BigDecimal;
+import java.time.Duration;
 import java.util.Optional;
 
 @Service
@@ -29,6 +31,11 @@ public class ReservationMainService implements ReservationService {
         this.reservationRepository = reservationRepository;
         this.userService = userService;
         this.parkingSpotService = parkingSpotService;
+    }
+
+    private BigDecimal validPrice(Reservation reservation) {
+        Duration duration = Duration.between(reservation.getStartTime(), reservation.getEndTime());
+        return BigDecimal.valueOf(duration.toHours()).multiply(reservation.getParkingSpot().getParkingArea().getHourlyRate());
     }
 
     @Override
@@ -67,12 +74,13 @@ public class ReservationMainService implements ReservationService {
         {
             throw new ModelAlreadyExistsException("Reservation already exists");
         }
+
         Reservation reservation = new Reservation();
         reservation.setUser(user.get());
         reservation.setParkingSpot(parkingSpot.get());
         reservation.setStartTime(reservationDTO.startTime());
         reservation.setEndTime(reservationDTO.endTime());
-        reservation.setTotalCost(reservationDTO.totalCost());
+        reservation.setTotalCost(validPrice(reservation));
         ParkingSpot ps = parkingSpot.get();
         ps.setIsAvailable(false);
         parkingSpotService.updateParkingSpot(ps.getId(), ps);
@@ -98,7 +106,9 @@ public class ReservationMainService implements ReservationService {
         {
             throw new ModelAlreadyExistsException("Reservation already exists");
         }
-        return reservationRepository.save(reservationDTO.toModel(parkingSpot.get(), user.get()));
+        Reservation reservationToUpdate = reservationDTO.toModel(parkingSpot.get(), user.get());
+        reservationToUpdate.setTotalCost(validPrice(reservationToUpdate));
+        return reservationRepository.save(reservationToUpdate);
     }
 
     @Override

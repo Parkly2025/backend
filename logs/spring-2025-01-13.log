@@ -1,0 +1,751 @@
+2025-01-13 13:25:16 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 13:25:16 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 13:25:16 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 13:25:16 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2025-01-13 13:25:16 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 13:25:16 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 643 ms
+2025-01-13 13:25:16 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-01-13 13:25:17 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-01-13 13:25:29 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 13:25:29 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 13:25:29 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 13:25:29 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2025-01-13 13:25:29 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 13:25:29 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 566 ms
+2025-01-13 13:25:29 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-01-13 13:25:29 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-01-13 13:27:10 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 13:27:10 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 13:27:10 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 13:27:11 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-01-13 13:27:11 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 13:27:11 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 627 ms
+2025-01-13 13:27:11 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-01-13 13:27:11 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-01-13 13:27:25 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 13:27:25 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 13:27:25 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 13:27:25 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-01-13 13:27:25 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 13:27:25 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 571 ms
+2025-01-13 13:27:25 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 13:27:26 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 13:27:26 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 13:27:26 [INFO ] [restartedMain] zeUserDetailsManagerConfigurer: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-13 13:27:27 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 13:27:27 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 13:27:31 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 63 class path changes (0 additions, 0 deletions, 63 modifications)
+2025-01-13 13:27:31 [INFO ] [Thread-5] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 13:27:32 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 13:27:32 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 5 ms. Found 4 JPA repository interfaces.
+2025-01-13 13:27:32 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 13:27:32 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 179 ms
+2025-01-13 13:27:32 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 13:27:32 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 13:27:32 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 13:27:32 [INFO ] [restartedMain] zeUserDetailsManagerConfigurer: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-13 13:27:32 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 13:27:32 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 13:27:32 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
+2025-01-13 13:53:41 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 13:59:03 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 13:59:03 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 13:59:04 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 13:59:04 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2025-01-13 13:59:04 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 13:59:04 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 941 ms
+2025-01-13 13:59:04 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 13:59:05 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 13:59:05 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 13:59:05 [INFO ] [restartedMain] zeUserDetailsManagerConfigurer: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-13 13:59:05 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 13:59:05 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 13:59:11 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 9 class path changes (0 additions, 0 deletions, 9 modifications)
+2025-01-13 13:59:11 [INFO ] [Thread-5] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 13:59:11 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 13:59:11 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 4 ms. Found 4 JPA repository interfaces.
+2025-01-13 13:59:11 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 13:59:11 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 167 ms
+2025-01-13 13:59:11 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 13:59:11 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 13:59:11 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 13:59:12 [INFO ] [restartedMain] zeUserDetailsManagerConfigurer: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-13 13:59:12 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 13:59:12 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 13:59:12 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
+2025-01-13 13:59:12 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-01-13 13:59:12 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2025-01-13 14:01:39 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:01:40 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:01:40 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:01:41 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:01:41 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:01:41 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:01:41 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 624 ms
+2025-01-13 14:01:41 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:01:42 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:01:42 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:01:42 [INFO ] [restartedMain] zeUserDetailsManagerConfigurer: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-13 14:01:42 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 14:01:42 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 14:01:46 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-01-13 14:01:46 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 2 ms
+2025-01-13 14:03:45 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:04:10 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:04:10 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:04:10 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:04:10 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:04:11 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:04:11 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 775 ms
+2025-01-13 14:04:11 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:04:11 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:04:12 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:04:12 [INFO ] [restartedMain] zeUserDetailsManagerConfigurer: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-13 14:04:12 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 14:04:12 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 14:04:15 [INFO ] [http-nio-8080-exec-2] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-01-13 14:04:15 [INFO ] [http-nio-8080-exec-2] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2025-01-13 14:05:36 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:06:12 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:06:12 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:06:13 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:06:13 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:06:13 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:06:13 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 634 ms
+2025-01-13 14:06:13 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:06:14 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:06:14 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:06:14 [INFO ] [restartedMain] zeUserDetailsManagerConfigurer: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-13 14:06:14 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 14:06:14 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 14:06:17 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-01-13 14:06:17 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2025-01-13 14:07:09 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:07:25 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:07:25 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:07:25 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:07:25 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:07:25 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:07:25 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 587 ms
+2025-01-13 14:07:26 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:07:26 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:07:26 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:07:26 [INFO ] [restartedMain] zeUserDetailsManagerConfigurer: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-13 14:07:27 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 14:07:27 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 14:07:30 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 9 class path changes (0 additions, 0 deletions, 9 modifications)
+2025-01-13 14:07:30 [INFO ] [Thread-5] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:07:30 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:07:30 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 4 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:07:30 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:07:30 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 180 ms
+2025-01-13 14:07:30 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:07:30 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:07:30 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:07:31 [INFO ] [restartedMain] zeUserDetailsManagerConfigurer: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-13 14:07:31 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 14:07:31 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 14:07:31 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
+2025-01-13 14:07:33 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-01-13 14:07:33 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2025-01-13 14:10:31 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:10:32 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:10:32 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:10:33 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:10:33 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:10:33 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:10:33 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 600 ms
+2025-01-13 14:10:33 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:10:34 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:10:34 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:10:34 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'managementSecurityFilterChain' defined in class path resource [org/springframework/boot/actuate/autoconfigure/security/servlet/ManagementWebSecurityAutoConfiguration.class]: Unsatisfied dependency expressed through method 'managementSecurityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-01-13 14:10:34 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:10:34 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method managementSecurityFilterChain in org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2025-01-13 14:12:30 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:12:30 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:12:31 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:12:31 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:12:31 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:12:31 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 557 ms
+2025-01-13 14:12:31 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:12:32 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:12:32 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationController' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/controller/ReservationController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'reservationMainService' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/services/ReservationMainService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+2025-01-13 14:12:32 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:12:32 [ERROR] [restartedMain] amework.boot.SpringApplication: Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationController' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/controller/ReservationController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'reservationMainService' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/services/ReservationMainService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at pw.react.backend.BackendApplication.main(BackendApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationMainService' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/services/ReservationMainService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 36 common frames omitted
+2025-01-13 14:13:50 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:13:50 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:13:50 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:13:50 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:13:50 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:13:50 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 641 ms
+2025-01-13 14:13:50 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:13:51 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:13:51 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationController' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/controller/ReservationController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'reservationMainService' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/services/ReservationMainService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+2025-01-13 14:13:51 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:13:51 [ERROR] [restartedMain] amework.boot.SpringApplication: Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationController' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/controller/ReservationController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'reservationMainService' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/services/ReservationMainService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at pw.react.backend.BackendApplication.main(BackendApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationMainService' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/services/ReservationMainService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 36 common frames omitted
+2025-01-13 14:18:43 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:18:43 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:18:43 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:18:43 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:18:43 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:18:43 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 619 ms
+2025-01-13 14:18:44 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:18:44 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:18:44 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationController' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/controller/ReservationController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'reservationMainService' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/services/ReservationMainService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+2025-01-13 14:18:44 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:18:44 [ERROR] [restartedMain] amework.boot.SpringApplication: Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationController' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/controller/ReservationController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'reservationMainService' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/services/ReservationMainService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at pw.react.backend.BackendApplication.main(BackendApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationMainService' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/services/ReservationMainService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 36 common frames omitted
+2025-01-13 14:20:18 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:20:18 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:20:18 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:20:18 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:20:18 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:20:18 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 565 ms
+2025-01-13 14:20:19 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:20:19 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:20:19 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationController' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/controller/ReservationController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'reservationMainService' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/services/ReservationMainService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+2025-01-13 14:20:19 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:20:19 [ERROR] [restartedMain] amework.boot.SpringApplication: Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationController' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/controller/ReservationController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'reservationMainService' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/services/ReservationMainService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at pw.react.backend.BackendApplication.main(BackendApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'reservationMainService' defined in file [/Users/maksymnosal/IdeaProjects/backend/target/classes/pw/react/backend/services/ReservationMainService.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'pw.react.backend.services.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("userService")}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 36 common frames omitted
+2025-01-13 14:20:53 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:20:53 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:20:53 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:20:53 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:20:53 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:20:53 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 598 ms
+2025-01-13 14:20:53 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:20:54 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:20:54 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:20:54 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'managementSecurityFilterChain' defined in class path resource [org/springframework/boot/actuate/autoconfigure/security/servlet/ManagementWebSecurityAutoConfiguration.class]: Unsatisfied dependency expressed through method 'managementSecurityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-01-13 14:20:54 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:20:54 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method managementSecurityFilterChain in org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2025-01-13 14:22:31 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:22:31 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:22:31 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:22:31 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:22:32 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:22:32 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 565 ms
+2025-01-13 14:22:32 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:22:32 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:22:33 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:22:33 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'managementSecurityFilterChain' defined in class path resource [org/springframework/boot/actuate/autoconfigure/security/servlet/ManagementWebSecurityAutoConfiguration.class]: Unsatisfied dependency expressed through method 'managementSecurityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-01-13 14:22:33 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:22:33 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method managementSecurityFilterChain in org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2025-01-13 14:23:46 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:23:46 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:23:46 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:23:46 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:23:47 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:23:47 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 588 ms
+2025-01-13 14:23:47 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:23:47 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:23:48 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:23:48 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'managementSecurityFilterChain' defined in class path resource [org/springframework/boot/actuate/autoconfigure/security/servlet/ManagementWebSecurityAutoConfiguration.class]: Unsatisfied dependency expressed through method 'managementSecurityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-01-13 14:23:48 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:23:48 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method managementSecurityFilterChain in org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2025-01-13 14:24:11 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:24:11 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:24:11 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:24:11 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:24:11 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:24:11 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 548 ms
+2025-01-13 14:24:11 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:24:12 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:24:12 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:24:12 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'managementSecurityFilterChain' defined in class path resource [org/springframework/boot/actuate/autoconfigure/security/servlet/ManagementWebSecurityAutoConfiguration.class]: Unsatisfied dependency expressed through method 'managementSecurityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-01-13 14:24:12 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:24:12 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method managementSecurityFilterChain in org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2025-01-13 14:25:57 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:25:57 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:25:57 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:25:57 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:25:57 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:25:57 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 636 ms
+2025-01-13 14:25:58 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:25:58 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:25:58 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:25:59 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'managementSecurityFilterChain' defined in class path resource [org/springframework/boot/actuate/autoconfigure/security/servlet/ManagementWebSecurityAutoConfiguration.class]: Unsatisfied dependency expressed through method 'managementSecurityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-01-13 14:25:59 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:25:59 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method managementSecurityFilterChain in org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2025-01-13 14:27:19 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:27:19 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:27:19 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:27:20 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:27:20 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:27:20 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 588 ms
+2025-01-13 14:27:20 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:27:20 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:27:21 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:27:21 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'managementSecurityFilterChain' defined in class path resource [org/springframework/boot/actuate/autoconfigure/security/servlet/ManagementWebSecurityAutoConfiguration.class]: Unsatisfied dependency expressed through method 'managementSecurityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-01-13 14:27:21 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:27:21 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method managementSecurityFilterChain in org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2025-01-13 14:29:05 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:29:05 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:29:06 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:29:06 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:29:06 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:29:06 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 591 ms
+2025-01-13 14:29:06 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:29:07 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:29:07 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:29:07 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'managementSecurityFilterChain' defined in class path resource [org/springframework/boot/actuate/autoconfigure/security/servlet/ManagementWebSecurityAutoConfiguration.class]: Unsatisfied dependency expressed through method 'managementSecurityFilterChain' parameter 0: No qualifying bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-01-13 14:29:07 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:29:07 [ERROR] [restartedMain] LoggingFailureAnalysisReporter: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method managementSecurityFilterChain in org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration required a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.config.annotation.web.builders.HttpSecurity' in your configuration.
+
+2025-01-13 14:29:57 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:29:57 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:29:57 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:29:57 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:29:58 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:29:58 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 582 ms
+2025-01-13 14:29:58 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:29:58 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:29:59 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:29:59 [INFO ] [restartedMain] zeUserDetailsManagerConfigurer: Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-13 14:29:59 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 14:29:59 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 14:30:07 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-01-13 14:30:07 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2025-01-13 14:31:24 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:35:02 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:35:02 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:35:02 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:35:02 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:35:02 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:35:02 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 591 ms
+2025-01-13 14:35:03 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:35:03 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:35:04 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:35:04 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 14:35:04 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 14:39:19 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:39:32 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:39:32 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:39:32 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:39:32 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:39:32 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:39:32 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 593 ms
+2025-01-13 14:39:32 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:39:33 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:39:33 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:39:33 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 14:39:33 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 14:39:47 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:39:52 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:39:52 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:39:52 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:39:52 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:39:52 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:39:53 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 562 ms
+2025-01-13 14:39:53 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:39:53 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:39:53 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:39:54 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 14:39:54 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 14:40:25 [INFO ] [http-nio-8080-exec-2] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-01-13 14:40:25 [INFO ] [http-nio-8080-exec-2] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2025-01-13 14:42:18 [WARN ] [http-nio-8080-exec-5] eModule$WarningLoggingModifier: Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-01-13 14:52:23 [WARN ] [http-nio-8080-exec-7] efaultHandlerExceptionResolver: Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `pw.react.backend.utils.UserRole` from String "user": not one of the values accepted for Enum class: [GUEST, USER, ADMIN]]
+2025-01-13 14:53:40 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:53:42 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:53:42 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:53:42 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:53:42 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:53:42 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:53:42 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 582 ms
+2025-01-13 14:53:43 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:53:43 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:53:43 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:53:44 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 14:53:44 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 14:53:49 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:53:50 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:53:50 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:53:50 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:53:50 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:53:50 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:53:51 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 551 ms
+2025-01-13 14:53:51 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:53:51 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:53:51 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:53:52 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 14:53:52 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 14:53:56 [INFO ] [http-nio-8080-exec-2] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-01-13 14:53:56 [INFO ] [http-nio-8080-exec-2] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2025-01-13 14:55:17 [WARN ] [http-nio-8080-exec-4] eModule$WarningLoggingModifier: Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-01-13 14:59:43 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:59:44 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-13 14:59:44 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-13 14:59:44 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-13 14:59:44 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2025-01-13 14:59:45 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-01-13 14:59:45 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 582 ms
+2025-01-13 14:59:45 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-13 14:59:45 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-13 14:59:46 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-01-13 14:59:46 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-01-13 14:59:46 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-01-13 14:59:54 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-01-13 14:59:54 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2025-01-13 15:41:19 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
