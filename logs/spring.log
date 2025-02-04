@@ -1,426 +1,173 @@
-2025-01-17 13:05:36 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-01-17 13:05:36 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-01-17 13:05:37 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:05:37 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:05:37 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:05:37 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 628 ms
-2025-01-17 13:05:37 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:05:38 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:05:38 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:05:38 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:05:38 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:05:42 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:05:42 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
-2025-01-17 13:06:16 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:06:16 [INFO ] [Thread-5] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:06:17 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:06:17 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 4 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:06:17 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:06:17 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 165 ms
-2025-01-17 13:06:17 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:06:17 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:06:17 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:06:17 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:06:17 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:06:17 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:06:25 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:06:25 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 2 ms
-2025-01-17 13:07:43 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:07:43 [INFO ] [Thread-7] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:07:43 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:07:43 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 5 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:07:43 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:07:43 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 177 ms
-2025-01-17 13:07:43 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:07:43 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:07:43 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:07:43 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:07:43 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:07:43 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:08:49 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:08:49 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 3 ms
-2025-01-17 13:08:49 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:08:50 [WARN ] [http-nio-8080-exec-4] efaultHandlerExceptionResolver: Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to write: java.nio.channels.ClosedChannelException]
-2025-01-17 13:08:50 [INFO ] [Thread-11] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:08:50 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:08:50 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 4 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:08:50 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:08:50 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 148 ms
-2025-01-17 13:08:50 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:08:50 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:08:50 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:08:50 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:08:50 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:08:50 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:08:51 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:08:51 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 3 ms
-2025-01-17 13:10:17 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:10:17 [INFO ] [Thread-15] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:10:18 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:10:18 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 4 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:10:18 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:10:18 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 146 ms
-2025-01-17 13:10:18 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:10:18 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:10:18 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:10:18 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:10:18 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:10:18 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:13:09 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:13:09 [INFO ] [Thread-19] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:13:09 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:13:09 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 3 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:13:09 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:13:09 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 139 ms
-2025-01-17 13:13:09 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:13:09 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:13:09 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:13:09 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:13:09 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:13:09 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:14:54 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:14:54 [INFO ] [Thread-23] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:14:55 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:14:55 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 3 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:14:55 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:14:55 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 132 ms
-2025-01-17 13:14:55 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:14:55 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:14:55 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:14:55 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:14:55 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:14:55 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:15:52 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:15:52 [INFO ] [Thread-27] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:15:52 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:15:52 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 3 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:15:52 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:15:52 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 129 ms
-2025-01-17 13:15:52 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:15:52 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:15:52 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:15:52 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:15:52 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:15:52 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:18:58 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:18:58 [INFO ] [Thread-31] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:18:58 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:18:58 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:18:58 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:18:58 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 126 ms
-2025-01-17 13:18:58 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:18:58 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:18:58 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:18:58 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:18:59 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:18:59 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:18:59 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:18:59 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 2 ms
-2025-01-17 13:22:10 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:22:10 [INFO ] [Thread-35] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:22:10 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:22:10 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 3 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:22:10 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:22:10 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 137 ms
-2025-01-17 13:22:10 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:22:10 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:22:10 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:22:10 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:22:10 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:22:10 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:23:43 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:23:43 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 2 ms
-2025-01-17 13:23:43 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:23:43 [WARN ] [http-nio-8080-exec-4] efaultHandlerExceptionResolver: Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to write: java.nio.channels.ClosedChannelException]
-2025-01-17 13:23:43 [INFO ] [Thread-39] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:23:43 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:23:43 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 3 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:23:43 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:23:43 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 141 ms
-2025-01-17 13:23:43 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:23:43 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:23:43 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:23:43 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:23:43 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:23:43 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:23:44 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:23:44 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 3 ms
-2025-01-17 13:26:49 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:26:49 [INFO ] [Thread-43] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:26:49 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:26:49 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:26:49 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:26:49 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 122 ms
-2025-01-17 13:26:49 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:26:49 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:26:49 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:26:50 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:26:50 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:26:50 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:28:01 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:28:01 [INFO ] [Thread-47] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:28:01 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:28:01 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 3 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:28:01 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:28:01 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 128 ms
-2025-01-17 13:28:01 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:28:01 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:28:02 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:28:02 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:28:02 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:28:02 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:28:33 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:28:33 [INFO ] [Thread-51] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:28:33 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:28:33 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:28:33 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:28:33 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 138 ms
-2025-01-17 13:28:33 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:28:33 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:28:33 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:28:33 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:28:33 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:28:33 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:30:17 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:30:17 [INFO ] [Thread-55] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:30:17 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:30:17 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 4 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:30:17 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:30:17 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 138 ms
-2025-01-17 13:30:17 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:30:17 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:30:17 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:30:18 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:30:18 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:30:18 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:31:03 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:31:03 [INFO ] [Thread-59] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:31:04 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:31:04 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:31:04 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:31:04 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 123 ms
-2025-01-17 13:31:04 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:31:04 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:31:04 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:31:04 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:31:04 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:31:04 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:31:46 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:31:46 [INFO ] [Thread-63] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:31:46 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:31:46 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 3 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:31:46 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:31:46 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 128 ms
-2025-01-17 13:31:46 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:31:46 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:31:46 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:31:46 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:31:46 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:31:46 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:32:04 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:32:04 [INFO ] [Thread-67] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:32:04 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:32:04 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:32:04 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:32:04 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 126 ms
-2025-01-17 13:32:04 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:32:04 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:32:04 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:32:04 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:32:04 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:32:04 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:33:14 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:33:14 [INFO ] [Thread-71] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:33:14 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:33:14 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:33:14 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:33:14 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 125 ms
-2025-01-17 13:33:14 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:33:14 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:33:14 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:33:14 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:33:14 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:33:14 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:34:52 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:34:52 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 2 ms
-2025-01-17 13:34:52 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:34:52 [INFO ] [Thread-75] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:34:52 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:34:52 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:34:52 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:34:52 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 130 ms
-2025-01-17 13:34:52 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:34:52 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:34:52 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:34:53 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:34:53 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:34:53 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:35:25 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:35:25 [INFO ] [Thread-79] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:35:25 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:35:25 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:35:25 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:35:25 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 125 ms
-2025-01-17 13:35:26 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:35:26 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:35:26 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:35:26 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:35:26 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:35:26 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:35:32 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:35:32 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 3 ms
-2025-01-17 13:36:00 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:36:00 [INFO ] [Thread-83] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:36:00 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:36:00 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:36:00 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:36:00 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 140 ms
-2025-01-17 13:36:00 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:36:00 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:36:00 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:36:00 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:36:00 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:36:00 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:36:01 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:36:01 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 3 ms
-2025-01-17 13:36:25 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:36:25 [INFO ] [Thread-87] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:36:25 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:36:25 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 3 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:36:25 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:36:25 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 131 ms
-2025-01-17 13:36:25 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:36:25 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:36:25 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:36:25 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:36:25 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:36:25 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:36:32 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:36:32 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 3 ms
-2025-01-17 13:37:35 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:37:35 [INFO ] [Thread-91] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:37:35 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:37:35 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 3 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:37:35 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:37:35 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 133 ms
-2025-01-17 13:37:35 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:37:35 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:37:35 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:37:35 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:37:35 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:37:35 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:38:14 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:38:14 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 3 ms
-2025-01-17 13:43:19 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:43:19 [INFO ] [Thread-95] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:43:19 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:43:19 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 3 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:43:19 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:43:19 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 132 ms
-2025-01-17 13:43:19 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:43:19 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:43:19 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:43:19 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:43:19 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:43:19 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:44:39 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:44:39 [INFO ] [Thread-99] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:44:39 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:44:39 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:44:39 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:44:39 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 125 ms
-2025-01-17 13:44:39 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:44:39 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:44:39 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:44:39 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:44:39 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:44:39 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:48:16 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:48:16 [INFO ] [Thread-103] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:48:16 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:48:16 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:48:16 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:48:16 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 125 ms
-2025-01-17 13:48:16 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:48:16 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:48:16 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:48:17 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:48:17 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:48:17 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:49:12 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:49:12 [INFO ] [Thread-107] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:49:12 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:49:12 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:49:12 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:49:12 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 132 ms
-2025-01-17 13:49:12 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:49:12 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:49:12 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:49:13 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:49:13 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:49:13 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:49:58 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:49:58 [INFO ] [Thread-111] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:49:59 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:49:59 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:49:59 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:49:59 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 124 ms
-2025-01-17 13:49:59 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:49:59 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:49:59 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:49:59 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:49:59 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:49:59 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:50:52 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:50:52 [INFO ] [Thread-115] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:50:53 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:50:53 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 3 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:50:53 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:50:53 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 130 ms
-2025-01-17 13:50:53 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:50:53 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:50:53 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:50:53 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:50:53 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:50:53 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:51:16 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:51:16 [INFO ] [Thread-119] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:51:16 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:51:16 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:51:16 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:51:16 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 126 ms
-2025-01-17 13:51:16 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:51:16 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:51:16 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:51:16 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:51:16 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:51:16 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:51:20 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:51:20 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 2 ms
-2025-01-17 13:53:41 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:53:41 [INFO ] [Thread-123] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:53:41 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:53:41 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 2 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:53:41 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:53:41 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 125 ms
-2025-01-17 13:53:41 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:53:41 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:53:41 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:53:41 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:53:41 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:53:41 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:54:06 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-2025-01-17 13:54:06 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
-2025-01-17 13:54:07 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-2025-01-17 13:54:07 [INFO ] [Thread-127] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:54:07 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-17 13:54:07 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 3 ms. Found 4 JPA repository interfaces.
-2025-01-17 13:54:07 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
-2025-01-17 13:54:07 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 124 ms
-2025-01-17 13:54:07 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-17 13:54:07 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-17 13:54:07 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
-2025-01-17 13:54:07 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
-2025-01-17 13:54:07 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
-2025-01-17 13:54:07 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
-2025-01-17 13:56:07 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:22:08 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03 22:22:08 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03 22:22:09 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03 22:22:09 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 87 ms. Found 4 JPA repository interfaces.
+2025-02-03 22:22:10 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-02-03 22:22:10 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2505 ms
+2025-02-03 22:22:10 [WARN ] [restartedMain] letWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'
+2025-02-03 22:22:10 [ERROR] [restartedMain] amework.boot.SpringApplication: Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at pw.react.backend.BackendApplication.main(BackendApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 37 common frames omitted
+Caused by: java.lang.IllegalArgumentException: URL must start with 'jdbc'
+	at org.springframework.util.Assert.isTrue(Assert.java:111)
+	at org.springframework.boot.jdbc.DatabaseDriver.fromJdbcUrl(DatabaseDriver.java:284)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:180)
+	at org.springframework.boot.autoconfigure.jdbc.PropertiesJdbcConnectionDetails.getDriverClassName(PropertiesJdbcConnectionDetails.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:55)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:117)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	... 38 common frames omitted
+2025-02-03 22:24:34 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03 22:24:34 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03 22:24:35 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03 22:24:35 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 63 ms. Found 4 JPA repository interfaces.
+2025-02-03 22:24:36 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-02-03 22:24:36 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2179 ms
+2025-02-03 22:24:38 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03 22:24:39 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:24:40 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-02-03 22:24:41 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-02-03 22:24:41 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-02-03 22:26:26 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-02-03 22:26:26 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 2 ms
+2025-02-03 22:27:14 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:27:27 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03 22:27:27 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03 22:27:29 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03 22:27:29 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 64 ms. Found 4 JPA repository interfaces.
+2025-02-03 22:27:30 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-02-03 22:27:30 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2280 ms
+2025-02-03 22:27:31 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03 22:27:33 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:27:34 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-02-03 22:27:34 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-02-03 22:27:34 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-02-03 22:27:40 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-02-03 22:27:40 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 2 ms
+2025-02-03 22:28:35 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:28:43 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03 22:28:43 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03 22:28:44 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03 22:28:45 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 150 ms. Found 4 JPA repository interfaces.
+2025-02-03 22:28:46 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-02-03 22:28:46 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 3110 ms
+2025-02-03 22:28:48 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03 22:28:49 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:28:51 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-02-03 22:28:52 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-02-03 22:28:52 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-02-03 22:28:57 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-02-03 22:28:57 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2025-02-03 22:29:36 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:29:41 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03 22:29:41 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03 22:29:43 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03 22:29:43 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 120 ms. Found 4 JPA repository interfaces.
+2025-02-03 22:29:44 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-02-03 22:29:44 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 3284 ms
+2025-02-03 22:29:47 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03 22:29:48 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:29:49 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-02-03 22:29:50 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-02-03 22:29:50 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-02-03 22:29:54 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-02-03 22:29:54 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 3 ms
+2025-02-03 22:31:21 [INFO ] [File Watcher] PathChangeChangedEventListener: Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-02-03 22:31:21 [INFO ] [Thread-5] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:31:22 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03 22:31:22 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 67 ms. Found 4 JPA repository interfaces.
+2025-02-03 22:31:23 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-02-03 22:31:23 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1115 ms
+2025-02-03 22:31:24 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03 22:31:24 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:31:24 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-02-03 22:31:25 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-02-03 22:31:25 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-02-03 22:31:25 [INFO ] [restartedMain] EvaluationDeltaLoggingListener: Condition evaluation unchanged
+2025-02-03 22:31:39 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:31:46 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03 22:31:46 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03 22:31:47 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03 22:31:47 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 69 ms. Found 4 JPA repository interfaces.
+2025-02-03 22:31:48 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-02-03 22:31:48 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2304 ms
+2025-02-03 22:31:55 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03 22:31:56 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:31:57 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-02-03 22:31:58 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-02-03 22:31:58 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-02-03 22:31:58 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-02-03 22:31:58 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 1 ms
+2025-02-03 22:32:14 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:32:19 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03 22:32:19 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03 22:32:20 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03 22:32:20 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 62 ms. Found 4 JPA repository interfaces.
+2025-02-03 22:32:21 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-02-03 22:32:21 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2255 ms
+2025-02-03 22:32:23 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03 22:32:24 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:32:25 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-02-03 22:32:29 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-03 22:32:29 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-03 22:32:30 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-03 22:32:30 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 66 ms. Found 4 JPA repository interfaces.
+2025-02-03 22:32:32 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-02-03 22:32:32 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2450 ms
+2025-02-03 22:32:34 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-03 22:32:35 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-03 22:32:37 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-02-03 22:32:38 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-02-03 22:32:38 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-02-03 22:32:47 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-02-03 22:32:47 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 3 ms
+2025-02-03 22:33:11 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'

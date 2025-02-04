@@ -61,7 +61,11 @@ public class MainConfig {
                     registry.addMapping("/**");
                 } else {
                     for (String mapping : mappings) {
-                        registry.addMapping(mapping).allowedOrigins(getCorsUrls());
+                        registry.addMapping(mapping).allowedOrigins(getCorsUrls())
+                                .allowedOriginPatterns("*")
+                                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                                .allowedHeaders("Authorization", "Content-Type")
+                                .allowCredentials(true);
 
                     }
                 }
