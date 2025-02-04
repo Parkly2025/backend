@@ -33,15 +33,26 @@ public class ParkingAreaMainService implements ParkingAreaService {
         } else if (sortDirection.equalsIgnoreCase("asc")) {
             sort = sort.ascending();
         }
+
         Pageable pageable = PageRequest.of(page, size, sort);
         searchQuery = searchQuery == null ? "" : searchQuery;
         searchQueryParameter = searchQueryParameter == null ? "" : searchQueryParameter;
-        Specification<ParkingArea> specification = switch (searchQueryParameter) {
-            case "address" -> ParkingAreaSpecification.hasAddress(searchQuery);
-            case "city" -> ParkingAreaSpecification.hasCity(searchQuery);
-            case "name" -> ParkingAreaSpecification.hasName(searchQuery);
-            default -> Specification.where(null);
-        };
+
+        Specification<ParkingArea> specification;
+
+        if (searchQueryParameter.isEmpty()) {
+            specification = Specification
+                    .where(ParkingAreaSpecification.hasAddress(searchQuery))
+                    .or(ParkingAreaSpecification.hasCity(searchQuery))
+                    .or(ParkingAreaSpecification.hasName(searchQuery));
+        } else {
+            specification = switch (searchQueryParameter) {
+                case "address" -> ParkingAreaSpecification.hasAddress(searchQuery);
+                case "city" -> ParkingAreaSpecification.hasCity(searchQuery);
+                case "name" -> ParkingAreaSpecification.hasName(searchQuery);
+                default -> Specification.where(null);
+            };
+        }
 
         return parkingAreaRepository.findAll(specification, pageable);
     }
