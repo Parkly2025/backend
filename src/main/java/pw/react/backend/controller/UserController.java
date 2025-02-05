@@ -24,6 +24,8 @@ import pw.react.backend.services.UserService;
 import pw.react.backend.utils.ProtectedEndpoint;
 import pw.react.backend.utils.Utils;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -166,9 +168,14 @@ public class UserController {
             ResponseCookie cookie = ResponseCookie.from("userRole", user.getRole().name())
                     .maxAge(10 * 60 * 60).path("/").httpOnly(true).build();
 
+            Map<String, Object> responseBody = new HashMap<>();
+            responseBody.put("userId", user.getId());
+            responseBody.put("username", user.getUsername());
+            responseBody.put("role", user.getRole().name());
+
             return ResponseEntity.ok()
                     .header(HttpHeaders.SET_COOKIE, cookie.toString())
-                    .build();
+                    .body(responseBody);
         } catch (ModelNotFoundException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
