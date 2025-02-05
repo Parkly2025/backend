@@ -36,7 +36,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/reservations")
-@Tag(name = "Reservations (no integration with Carly or whatever other team)", description = "Operations related to parking spot reservations")
+@Tag(name = "Reservations (pure Parkly)", description = "Operations related to reservations")
 public class ReservationController {
 
     final private ReservationService reservationService;
@@ -107,6 +107,29 @@ public class ReservationController {
         }
 
         return reservationService.findById(id)
+                .map(reservation -> ResponseEntity.ok(ReturnReservationDTO.fromModel(reservation))) // Convert to DTO here
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+
+    @GetMapping("/parkingSpot/{id}")
+    @ProtectedEndpoint
+    @Operation(summary = "Get reservation by Parking Spot ID",
+            description = "Retrieves a reservation by its Parking Spot ID. Requires admin or user role.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Successful retrieval of reservation", content = @Content(mediaType = "application/json", schema = @Schema(implementation = ReturnReservationDTO.class))),
+            @ApiResponse(responseCode = "403", description = "Forbidden - insufficient privileges"),
+            @ApiResponse(responseCode = "404", description = "Not Found - reservation not found")
+    })
+    public ResponseEntity<?> getReservationByParkingSpotId(
+            @Parameter(description = "ID of the Parking Spot reservation to retrieve", required = true, example = "123") @PathVariable Long id,
+            @Parameter @CookieValue(value = "userRole", required = false) String userRole) {
+
+        if (!Utils.roleAdminOrUser(userRole)) {
+            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+        }
+
+        return reservationService.findByParkingSpotId(id)
                 .map(reservation -> ResponseEntity.ok(ReturnReservationDTO.fromModel(reservation))) // Convert to DTO here
                 .orElse(ResponseEntity.notFound().build());
     }

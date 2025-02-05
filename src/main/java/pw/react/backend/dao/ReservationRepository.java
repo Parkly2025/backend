@@ -18,4 +18,5 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long>,
     boolean existsByUserAndParkingSpotAndStartTimeAndEndTime
             (User user, ParkingSpot parkingSpot, LocalDateTime startTime, LocalDateTime endTime);
     Page<Reservation> findByUserId(Long userId, Pageable pageable);
+    Optional<Reservation> findByParkingSpot(ParkingSpot parkingSpot);
 }

@@ -30,6 +30,9 @@ public class Reservation {
     @Column(precision = 10, scale = 2)
     private BigDecimal totalCost;
 
+    @Column(nullable = false)
+    private LocalDateTime createdAt;
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public ParkingSpot getParkingSpot() { return parkingSpot; }
@@ -42,4 +45,6 @@ public class Reservation {
     public void setEndTime(LocalDateTime endTime) { this.endTime = endTime; }
     public BigDecimal getTotalCost() { return totalCost; }
     public void setTotalCost(BigDecimal totalCost) { this.totalCost = totalCost; }
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 }

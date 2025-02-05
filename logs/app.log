@@ -1,25 +1,89 @@
-2025-02-03 22:22:08 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 9444 (C:\Users\Dell\source\repos\backend\target\classes started by Dell in C:\Users\Dell\source\repos\backend)
-2025-02-03 22:22:08 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
-2025-02-03 22:24:33 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 11868 (C:\Users\Dell\source\repos\backend\target\classes started by Dell in C:\Users\Dell\source\repos\backend)
-2025-02-03 22:24:33 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
-2025-02-03 22:24:41 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 8.051 seconds (process running for 9.063)
-2025-02-03 22:27:27 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 20776 (C:\Users\Dell\source\repos\backend\target\classes started by Dell in C:\Users\Dell\source\repos\backend)
-2025-02-03 22:27:27 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
-2025-02-03 22:27:34 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 7.535 seconds (process running for 8.604)
-2025-02-03 22:28:43 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 12768 (C:\Users\Dell\source\repos\backend\target\classes started by Dell in C:\Users\Dell\source\repos\backend)
-2025-02-03 22:28:43 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
-2025-02-03 22:28:52 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 10.103 seconds (process running for 11.084)
-2025-02-03 22:29:41 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 1848 (C:\Users\Dell\source\repos\backend\target\classes started by Dell in C:\Users\Dell\source\repos\backend)
-2025-02-03 22:29:41 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
-2025-02-03 22:29:50 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 10.324 seconds (process running for 11.699)
-2025-02-03 22:31:22 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 1848 (C:\Users\Dell\source\repos\backend\target\classes started by Dell in C:\Users\Dell\source\repos\backend)
-2025-02-03 22:31:22 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
-2025-02-03 22:31:25 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 3.1 seconds (process running for 105.793)
-2025-02-03 22:31:46 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 12824 (C:\Users\Dell\source\repos\backend\target\classes started by Dell in C:\Users\Dell\source\repos\backend)
-2025-02-03 22:31:46 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
-2025-02-03 22:31:58 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 12.788 seconds (process running for 13.814)
-2025-02-03 22:32:19 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 20848 (C:\Users\Dell\source\repos\backend\target\classes started by Dell in C:\Users\Dell\source\repos\backend)
-2025-02-03 22:32:19 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
-2025-02-03 22:32:29 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 7184 (C:\Users\Dell\source\repos\backend\target\classes started by Dell in C:\Users\Dell\source\repos\backend)
-2025-02-03 22:32:29 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
-2025-02-03 22:32:38 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 9.108 seconds (process running for 10.187)
+2025-02-02 13:15:12 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 13:15:12 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
+2025-02-02 13:15:14 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 2.197 seconds (process running for 2.604)
+2025-02-02 13:30:26 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 13:30:26 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
+2025-02-02 13:30:26 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 0.619 seconds (process running for 914.96)
+2025-02-02 13:33:39 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 13:33:39 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
+2025-02-02 13:33:39 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 0.562 seconds (process running for 1108.061)
+2025-02-02 13:34:22 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 13:34:22 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
+2025-02-02 13:34:23 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 0.497 seconds (process running for 1151.482)
+2025-02-02 13:35:45 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 13:35:45 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
+2025-02-02 13:35:46 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 0.496 seconds (process running for 1234.344)
+2025-02-02 14:08:44 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 14:08:44 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
+2025-02-02 14:08:44 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 0.651 seconds (process running for 3212.986)
+2025-02-02 14:09:21 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 14:09:21 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
+2025-02-02 14:09:22 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 0.461 seconds (process running for 3250.27)
+2025-02-02 14:10:36 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 14:10:36 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
+2025-02-02 14:10:37 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 0.459 seconds (process running for 3325.384)
+2025-02-02 14:10:58 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 14:10:58 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
+2025-02-02 14:10:58 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 0.577 seconds (process running for 3347.017)
+2025-02-02 14:11:20 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 14:11:20 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
+2025-02-02 14:11:20 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 0.45 seconds (process running for 3369.156)
+2025-02-02 14:19:53 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 14:19:53 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
+2025-02-02 14:35:02 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 99266 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 14:35:02 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "mysql"
+2025-02-02 14:35:03 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 0.526 seconds (process running for 4791.66)
+2025-02-02 16:07:25 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 1436 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 16:07:25 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "azure-mysql"
+2025-02-02 16:08:42 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 1464 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 16:08:42 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "azure-mysql"
+2025-02-02 16:09:06 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 1469 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 16:09:06 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "azure-mysql"
+2025-02-02 16:10:45 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 1622 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 16:10:45 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "azure-mysql"
+2025-02-02 16:11:15 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.5 with PID 1632 (/Users/maksymnosal/IdeaProjects/backend/target/classes started by maksymnosal in /Users/maksymnosal/IdeaProjects/backend)
+2025-02-02 16:11:15 [INFO ] [restartedMain] act.backend.BackendApplication: The following 1 profile is active: "azure-mysql"
+2025-02-02 16:11:17 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 2.716 seconds (process running for 3.027)
+2025-02-05 18:58:05 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 55268 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 18:58:05 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 18:58:47 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 46576 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 18:58:47 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 19:00:00 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 53384 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 19:00:00 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 19:00:58 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 53672 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 19:00:58 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 19:03:58 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 54040 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 19:03:58 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 19:04:33 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 40220 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 19:04:33 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 19:05:15 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 53676 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 19:05:15 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 19:05:50 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 38568 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 19:05:50 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 19:10:05 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 40004 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 19:10:05 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 19:10:10 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 5.391 seconds (process running for 6.266)
+2025-02-05 19:13:41 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 54384 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 19:13:41 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 19:13:46 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 6.122 seconds (process running for 7.246)
+2025-02-05 19:16:16 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 41528 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 19:16:16 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 19:16:21 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 5.534 seconds (process running for 6.285)
+2025-02-05 19:18:22 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 35604 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 19:18:22 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 19:18:28 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 6.138 seconds (process running for 6.981)
+2025-02-05 19:48:01 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 55108 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 19:48:01 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 19:48:08 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 7.254 seconds (process running for 8.226)
+2025-02-05 20:01:37 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 49252 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 20:01:37 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 20:01:44 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 7.341 seconds (process running for 8.238)
+2025-02-05 20:08:21 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 55112 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 20:08:21 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 20:08:28 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 6.418 seconds (process running for 7.335)
+2025-02-05 20:17:01 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 52388 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 20:17:01 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 20:17:07 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 7.0 seconds (process running for 8.078)
+2025-02-05 20:19:12 [INFO ] [restartedMain] act.backend.BackendApplication: Starting BackendApplication using Java 21.0.6 with PID 45656 (C:\Users\admin\source\repos\backend\target\classes started by admin in C:\Users\admin\source\repos\backend)
+2025-02-05 20:19:12 [INFO ] [restartedMain] act.backend.BackendApplication: No active profile set, falling back to 1 default profile: "default"
+2025-02-05 20:19:18 [INFO ] [restartedMain] act.backend.BackendApplication: Started BackendApplication in 6.091 seconds (process running for 6.927)
