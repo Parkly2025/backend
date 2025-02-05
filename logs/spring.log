@@ -722,3 +722,21 @@ Consider the following:
 2025-02-05 20:08:30 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
 2025-02-05 20:08:30 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 3 ms
 2025-02-05 20:15:52 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-05 20:17:01 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-05 20:17:01 [INFO ] [restartedMain] sPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-05 20:17:02 [INFO ] [restartedMain] epositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-05 20:17:02 [INFO ] [restartedMain] epositoryConfigurationDelegate: Finished Spring Data repository scanning in 70 ms. Found 4 JPA repository interfaces.
+2025-02-05 20:17:03 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat initialized with port 8080 (http)
+2025-02-05 20:17:03 [INFO ] [restartedMain] letWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2589 ms
+2025-02-05 20:17:04 [INFO ] [restartedMain] unit.SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-05 20:17:05 [INFO ] [restartedMain] tainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-05 20:17:06 [INFO ] [restartedMain] oint.web.EndpointLinksResolver: Exposing 7 endpoints beneath base path '/actuator'
+2025-02-05 20:17:07 [INFO ] [restartedMain] igure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2025-02-05 20:17:07 [INFO ] [restartedMain] mbedded.tomcat.TomcatWebServer: Tomcat started on port 8080 (http) with context path '/'
+2025-02-05 20:17:38 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2025-02-05 20:17:38 [INFO ] [http-nio-8080-exec-1] .web.servlet.DispatcherServlet: Completed initialization in 2 ms
+2025-02-05 20:17:46 [WARN ] [http-nio-8080-exec-2] eModule$WarningLoggingModifier: Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2025-02-05 20:19:08 [INFO ] [SpringApplicationShutdownHook] tainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
