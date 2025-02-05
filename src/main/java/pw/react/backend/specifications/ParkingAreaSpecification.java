@@ -19,7 +19,7 @@ public class ParkingAreaSpecification {
             if (address == null || address.isEmpty()) {
                 return criteriaBuilder.conjunction();
             }
-            return criteriaBuilder.like(criteriaBuilder.lower(root.get("name")),
+            return criteriaBuilder.like(criteriaBuilder.lower(root.get("address")),
                     "%" + address.toLowerCase() + "%");
         };
     }
@@ -29,7 +29,7 @@ public class ParkingAreaSpecification {
             if (city == null || city.isEmpty()) {
                 return criteriaBuilder.conjunction();
             }
-            return criteriaBuilder.like(criteriaBuilder.lower(root.get("name")),
+            return criteriaBuilder.like(criteriaBuilder.lower(root.get("city")),
                     "%" + city.toLowerCase() + "%");
         };
     }
