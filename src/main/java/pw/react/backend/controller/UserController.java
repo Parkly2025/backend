@@ -172,6 +172,7 @@ public class UserController {
             responseBody.put("userId", user.getId());
             responseBody.put("username", user.getUsername());
             responseBody.put("role", user.getRole().name());
+            responseBody.put("email", user.getEmail());
 
             return ResponseEntity.ok()
                     .header(HttpHeaders.SET_COOKIE, cookie.toString())
