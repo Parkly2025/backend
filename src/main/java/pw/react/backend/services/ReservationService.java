@@ -16,4 +16,5 @@ public interface ReservationService {
     Reservation update(Long id, CreateReservationDTO reservationDTO);
     void delete(Long id);
     Page<Reservation> findByUserId(int page, int size, String sortDirection, Long userId);
+    Optional<Reservation> findByParkingSpotId(Long psId);
 }

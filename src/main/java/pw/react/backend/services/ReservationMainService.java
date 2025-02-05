@@ -18,6 +18,7 @@ import pw.react.backend.models.User;
 
 import java.math.BigDecimal;
 import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
@@ -81,6 +82,7 @@ public class ReservationMainService implements ReservationService {
         reservation.setStartTime(reservationDTO.startTime());
         reservation.setEndTime(reservationDTO.endTime());
         reservation.setTotalCost(validPrice(reservation));
+        reservation.setCreatedAt(LocalDateTime.now());
         ParkingSpot ps = parkingSpot.get();
         ps.setIsAvailable(false);
         parkingSpotService.updateParkingSpot(ps.getId(), ps);
@@ -134,5 +136,14 @@ public class ReservationMainService implements ReservationService {
 
         Pageable pageable = PageRequest.of(page, size, sort);
         return reservationRepository.findByUserId(userId, pageable);
+    }
+
+    @Override
+    public Optional<Reservation> findByParkingSpotId(Long psId) {
+        var ps_opt = parkingSpotService.getParkingSpot(psId);
+        if (ps_opt.isEmpty()) {
+            return Optional.empty();
+        }
+        return reservationRepository.findByParkingSpot(ps_opt.get());
     }
 }
