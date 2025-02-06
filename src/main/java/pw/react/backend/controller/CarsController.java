@@ -46,7 +46,7 @@ public class CarsController {
     @Operation(summary = "Get cars by proximity (longitude and latitude)",
             description = "Retrieves a paginated list of cars. Requires user or admin role")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successful retrieval of cars", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Page.class))),
+            @ApiResponse(responseCode = "200", description = "Successful retrieval of cars", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Page.class, contentSchema = Car.class))),
             @ApiResponse(responseCode = "403", description = "Forbidden - insufficient privileges")
     })
     public ResponseEntity<?> getCarsByProximity(
@@ -59,7 +59,7 @@ public class CarsController {
         int tries = 5;
         while (tries > 0) {
             HttpClient client = HttpClient.newBuilder().build();
-            int page_ = 1;
+            int page_ = 0;
             int size_ = Integer.MAX_VALUE;
             String sort = "asc";
 
@@ -149,30 +149,21 @@ public class CarsController {
             @Parameter(description = "Car reservation object DTO to create", required = true, schema = @Schema(implementation = CarReservationDTO.class)) @RequestBody CarReservationDTO reservationDTO
     ) {
 
-        // Try log in the user to Carly fist:
-        int resp = loginToCarly(reservationDTO.userEmail());
 
-        switch (resp) {
-            case 200:
-                // successful login
+        //int resp = loginToCarly(reservationDTO.userEmail());
+
+        if (createCarlyCarReservation(reservationDTO.carId(), reservationDTO.startTime(),
+                reservationDTO.endTime(), reservationDTO.userEmail())) {
+            return ResponseEntity.status(HttpStatus.CREATED).build();
+        } else {
+            if (createCarlyUser(reservationDTO.userEmail())) {
                 if (createCarlyCarReservation(reservationDTO.carId(), reservationDTO.startTime(),
                         reservationDTO.endTime(), reservationDTO.userEmail())) {
                     return ResponseEntity.status(HttpStatus.CREATED).build();
                 }
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-            case 409:
-                // we have to create user
-                if (createCarlyUser(reservationDTO.userEmail())) {
-                    if (createCarlyCarReservation(reservationDTO.carId(), reservationDTO.startTime(),
-                            reservationDTO.endTime(), reservationDTO.userEmail())) {
-                        return ResponseEntity.status(HttpStatus.CREATED).build();
-                    }
-                }
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-            default:
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+            }
         }
-
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
 
 
@@ -200,6 +191,7 @@ public class CarsController {
     }
 
     /// Returns status code from Carly server upon login try
+    @Deprecated(forRemoval = true)
     private int loginToCarly(String email) {
         HttpClient client = HttpClient.newBuilder().build();
         String urlWithParams = String.format("%s/customers/login", carlyHostname);
@@ -222,11 +214,11 @@ public class CarsController {
     }
 
     /// Returns true if reservation created
-    private Boolean createCarlyCarReservation(long carId, LocalDateTime startDate, LocalDateTime endDate, String email)
+    private Boolean createCarlyCarReservation(String carId, LocalDateTime startDate, LocalDateTime endDate, String email)
     {
         HttpClient client = HttpClient.newBuilder().build();
         String urlWithParams = String.format("%s/rentals", carlyHostname);
-        String requestBody = "{\"carId\": \"%d\", \"startAt\": \"%s\", \"endAt\": \"%s\"}".formatted(carId, startDate, endDate);
+        String requestBody = "{\"carId\": \"%s\", \"startAt\": \"%s\", \"endAt\": \"%s\"}".formatted(carId, startDate, endDate);
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(urlWithParams))
