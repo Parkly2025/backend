@@ -18,14 +18,14 @@ public class NonBatchConfig {
 
     @Bean
     @Qualifier("parkingAreaService")
-    public ParkingAreaService parkingAreaService(ParkingAreaRepository parkingAreaRepository) {
-        return new ParkingAreaMainService(parkingAreaRepository);
+    public ParkingAreaService parkingAreaService(ParkingAreaRepository parkingAreaRepository, ParkingSpotRepository parkingSpotRepository, ReservationRepository reservationRepository) {
+        return new ParkingAreaMainService(parkingAreaRepository, parkingSpotRepository, reservationRepository);
     }
 
     @Bean
     @Qualifier("parkingSpotService")
-    public ParkingSpotService parkingSpotService(ParkingSpotRepository parkingSpotRepository, ParkingAreaRepository parkingAreaRepository) {
-        return new ParkingSpotMainService(parkingSpotRepository, parkingAreaRepository);
+    public ParkingSpotService parkingSpotService(ParkingSpotRepository parkingSpotRepository, ParkingAreaRepository parkingAreaRepository, ReservationRepository reservationRepository) {
+        return new ParkingSpotMainService(parkingSpotRepository, parkingAreaRepository, reservationRepository);
     }
 
     @Bean

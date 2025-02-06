@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import pw.react.backend.dao.ParkingAreaRepository;
 import pw.react.backend.dao.ParkingSpotRepository;
+import pw.react.backend.dao.ReservationRepository;
 import pw.react.backend.dto.CreateParkingSpotDTO;
 import pw.react.backend.exceptions.ModelAlreadyExistsException;
 import pw.react.backend.exceptions.ModelValidationException;
@@ -21,10 +22,14 @@ public class ParkingSpotMainService implements ParkingSpotService {
 
     private final ParkingSpotRepository parkingSpotRepository;
     private final ParkingAreaRepository parkingAreaRepository;
+    private final ReservationRepository reservationRepository;
 
-    public ParkingSpotMainService(ParkingSpotRepository parkingSpotRepository, ParkingAreaRepository parkingAreaRepository) {
+    public ParkingSpotMainService(ParkingSpotRepository parkingSpotRepository,
+                                  ParkingAreaRepository parkingAreaRepository,
+                                  ReservationRepository reservationRepository) {
         this.parkingSpotRepository = parkingSpotRepository;
         this.parkingAreaRepository = parkingAreaRepository;
+        this.reservationRepository = reservationRepository;
     }
 
     @Override
@@ -70,8 +75,10 @@ public class ParkingSpotMainService implements ParkingSpotService {
 
     @Override
     public Boolean deleteParkingSpot(Long id) {
-        if (parkingSpotRepository.findById(id).isPresent()) {
-            parkingSpotRepository.deleteById(id);
+        ParkingSpot parkingSpot = parkingSpotRepository.findById(id).orElse(null);
+        if (parkingSpot != null) {
+            reservationRepository.findByParkingSpot(parkingSpot).ifPresent(reservationRepository::delete);
+            parkingSpotRepository.delete(parkingSpot);
             return true;
         }
         return false;

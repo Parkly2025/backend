@@ -34,11 +34,9 @@ import java.util.logging.Logger;
 @RequestMapping("/api/cars")
 @Tag(name = "Cars", description = "Operations related to cars and their reservations")
 public class CarsController {
-    final private ReservationService reservationService;
     final private String carlyHostname;
 
-    public CarsController(ReservationService reservationService) {
-        this.reservationService = reservationService;
+    public CarsController() {
         this.carlyHostname = System.getenv("CARLY_HOSTNAME");
     }
 
@@ -46,8 +44,7 @@ public class CarsController {
     @Operation(summary = "Get cars by proximity (longitude and latitude)",
             description = "Retrieves a paginated list of cars. Requires user or admin role")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successful retrieval of cars", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Page.class, contentSchema = Car.class))),
-            @ApiResponse(responseCode = "403", description = "Forbidden - insufficient privileges")
+            @ApiResponse(responseCode = "200", description = "Successful retrieval of cars", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Page.class, contentSchema = Car.class)))
     })
     public ResponseEntity<?> getCarsByProximity(
             @Parameter(description = "Page number (0-based)", required = true, example = "0") @PathVariable int page,
@@ -120,7 +117,6 @@ public class CarsController {
 
         Pageable pageable = PageRequest.of(page, size, sort);
 
-
         int pageSize = pageable.getPageSize();
         int currentPage = pageable.getPageNumber();
         int startItem = currentPage * pageSize;
@@ -142,16 +138,11 @@ public class CarsController {
             description = "Creates a new car reservation. Requires admin or user role.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Reservation created successfully"),
-            @ApiResponse(responseCode = "403", description = "Forbidden - insufficient privileges"),
             @ApiResponse(responseCode = "500", description = "Some kind of error occurred :(")
     })
     public ResponseEntity<?> createCarReservation(
             @Parameter(description = "Car reservation object DTO to create", required = true, schema = @Schema(implementation = CarReservationDTO.class)) @RequestBody CarReservationDTO reservationDTO
     ) {
-
-        // 409: already exists
-        // 201: created
-
         switch (createCarlyUser(reservationDTO.userEmail())) {
             case 409:
                 // user already exists
@@ -173,7 +164,7 @@ public class CarsController {
     }
 
 
-    /// Returns true if user created
+    /// Returns status code from Carly server upon create Carly user try
     private int createCarlyUser(String email) {
         HttpClient client = HttpClient.newBuilder().build();
         String urlWithParams = String.format("%s/customers/external", carlyHostname);
@@ -219,7 +210,7 @@ public class CarsController {
         }
     }
 
-    /// Returns true if reservation created
+    /// Returns status code from Carly server upon create reservation try
     private int createCarlyCarReservation(String carId, LocalDateTime startDate, LocalDateTime endDate, String email)
     {
         HttpClient client = HttpClient.newBuilder().build();

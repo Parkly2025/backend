@@ -7,8 +7,11 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import pw.react.backend.dao.ParkingAreaRepository;
+import pw.react.backend.dao.ParkingSpotRepository;
+import pw.react.backend.dao.ReservationRepository;
 import pw.react.backend.exceptions.ModelAlreadyExistsException;
 import pw.react.backend.models.ParkingArea;
+import pw.react.backend.models.ParkingSpot;
 import pw.react.backend.models.User;
 import pw.react.backend.specifications.ParkingAreaSpecification;
 import pw.react.backend.specifications.UserSpecification;
@@ -19,9 +22,15 @@ import java.util.Optional;
 public class ParkingAreaMainService implements ParkingAreaService {
 
     private final ParkingAreaRepository parkingAreaRepository;
+    private final ParkingSpotRepository parkingSpotRepository;
+    private final ReservationRepository reservationRepository;
 
-    public ParkingAreaMainService(ParkingAreaRepository parkingAreaRepository) {
+    public ParkingAreaMainService(ParkingAreaRepository parkingAreaRepository,
+                                  ParkingSpotRepository parkingSpotRepository,
+                                  ReservationRepository reservationRepository) {
         this.parkingAreaRepository = parkingAreaRepository;
+        this.parkingSpotRepository = parkingSpotRepository;
+        this.reservationRepository = reservationRepository;
     }
 
     @Override
@@ -91,10 +100,20 @@ public class ParkingAreaMainService implements ParkingAreaService {
 
     @Override
     public Boolean deleteParkingArea(Long id) {
-        if (parkingAreaRepository.findById(id).isPresent()) {
-            parkingAreaRepository.deleteById(id);
-            return true;
+        ParkingArea parkingArea = parkingAreaRepository.findById(id).orElse(null);
+
+        if (parkingArea == null) {
+            return false;
         }
-        return false;
+
+        var list = parkingSpotRepository.findByParkingArea(parkingArea);
+        if (!list.isEmpty()) {
+            for (ParkingSpot spot : list) {
+                reservationRepository.findByParkingSpot(spot).ifPresent(reservationRepository::delete);
+                parkingSpotRepository.delete(spot);
+            }
+        }
+        parkingAreaRepository.deleteById(id);
+        return true;
     }
 }
