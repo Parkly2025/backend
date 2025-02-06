@@ -149,26 +149,32 @@ public class CarsController {
             @Parameter(description = "Car reservation object DTO to create", required = true, schema = @Schema(implementation = CarReservationDTO.class)) @RequestBody CarReservationDTO reservationDTO
     ) {
 
+        // 409: already exists
+        // 201: created
 
-        //int resp = loginToCarly(reservationDTO.userEmail());
-
-        if (createCarlyCarReservation(reservationDTO.carId(), reservationDTO.startTime(),
-                reservationDTO.endTime(), reservationDTO.userEmail())) {
-            return ResponseEntity.status(HttpStatus.CREATED).build();
-        } else {
-            if (createCarlyUser(reservationDTO.userEmail())) {
-                if (createCarlyCarReservation(reservationDTO.carId(), reservationDTO.startTime(),
+        switch (createCarlyUser(reservationDTO.userEmail())) {
+            case 409:
+                // user already exists
+            case 201:
+                // user created successfully
+                switch (createCarlyCarReservation(reservationDTO.carId(), reservationDTO.startTime(),
                         reservationDTO.endTime(), reservationDTO.userEmail())) {
-                    return ResponseEntity.status(HttpStatus.CREATED).build();
+                    case 201:
+                        // made a car reservation
+                        return ResponseEntity.status(HttpStatus.CREATED).build();
+                    case 409:
+                        return ResponseEntity.status(HttpStatus.CONFLICT).build();
+                    default:
+                        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
                 }
-            }
+            default:
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
 
 
     /// Returns true if user created
-    private Boolean createCarlyUser(String email) {
+    private int createCarlyUser(String email) {
         HttpClient client = HttpClient.newBuilder().build();
         String urlWithParams = String.format("%s/customers/external", carlyHostname);
         String requestBody = "{\"email\": \"%s\"}".formatted(email);
@@ -182,11 +188,11 @@ public class CarsController {
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             // created user (hopefully)
-            return response.statusCode() == HttpStatus.OK.value();
+            return response.statusCode();
 
         } catch (InterruptedException | IOException e) {
             Logger.getAnonymousLogger().log(new LogRecord(Level.WARNING, "Could not get to Carly:\n" + e.getMessage()));
-            return false;
+            return 500;
         }
     }
 
@@ -214,10 +220,10 @@ public class CarsController {
     }
 
     /// Returns true if reservation created
-    private Boolean createCarlyCarReservation(String carId, LocalDateTime startDate, LocalDateTime endDate, String email)
+    private int createCarlyCarReservation(String carId, LocalDateTime startDate, LocalDateTime endDate, String email)
     {
         HttpClient client = HttpClient.newBuilder().build();
-        String urlWithParams = String.format("%s/rentals", carlyHostname);
+        String urlWithParams = String.format("%s/rentals/", carlyHostname);
         String requestBody = "{\"carId\": \"%s\", \"startAt\": \"%s\", \"endAt\": \"%s\"}".formatted(carId, startDate, endDate);
 
         HttpRequest request = HttpRequest.newBuilder()
@@ -229,11 +235,11 @@ public class CarsController {
 
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            return HttpStatus.OK.value() == response.statusCode();
+            return response.statusCode();
         }
         catch (InterruptedException | IOException e) {
             Logger.getAnonymousLogger().log(new LogRecord(Level.WARNING, "Could not get to Carly:\n" + e.getMessage()));
-            return false;
+            return 500;
         }
     }
 }
