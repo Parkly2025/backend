@@ -8,11 +8,13 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public record ReturnReservationDTO(Long id, Long parkingSpotId, Long userId, LocalDateTime startTime,
-                                   LocalDateTime endTime, BigDecimal totalCost, LocalDateTime createdAt) {
+                                   LocalDateTime endTime, BigDecimal totalCost, LocalDateTime createdAt,
+                                   User user, ParkingSpot parkingSpot) {
     public static ReturnReservationDTO fromModel(Reservation reservation) {
         return new ReturnReservationDTO(reservation.getId(), reservation.getParkingSpot().getId(),
                 reservation.getUser().getId(), reservation.getStartTime(),
-                reservation.getEndTime(), reservation.getTotalCost(), reservation.getCreatedAt());
+                reservation.getEndTime(), reservation.getTotalCost(), reservation.getCreatedAt(),
+                reservation.getUser(), reservation.getParkingSpot());
     }
 }
 
