@@ -8,34 +8,27 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pw.react.backend.dto.CarReservationDTO;
 import pw.react.backend.dto.CarsDTO;
-import pw.react.backend.exceptions.ModelValidationException;
 import pw.react.backend.models.Car;
 import pw.react.backend.services.ReservationService;
-import pw.react.backend.utils.ProtectedEndpoint;
 import pw.react.backend.utils.Utils;
 
-import java.io.Console;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.LocalDateTime;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/cars")
@@ -50,7 +43,6 @@ public class CarsController {
     }
 
     @GetMapping("/search/{page}")
-    @ProtectedEndpoint
     @Operation(summary = "Get cars by proximity (longitude and latitude)",
             description = "Retrieves a paginated list of cars. Requires user or admin role")
     @ApiResponses(value = {
@@ -62,11 +54,7 @@ public class CarsController {
             @Parameter(description = "Page size", example = "10") @RequestParam(value = "size", required = false, defaultValue = "10") int size,
             @Parameter(description = "Sort direction (asc or desc)", example = "asc") @RequestParam(value = "sortDirection", required = false, defaultValue = "asc") String sortDirection,
             @Parameter(description = "Longitude", example = "12.324") @RequestParam(value = "long", required = true) double longitude,
-            @Parameter(description = "Latitude", example = "12.324") @RequestParam(value = "lat", required = true) double latitude,
-            @Parameter @CookieValue(value = "userRole", required = false) String userRole) {
-        if (!Utils.roleAdmin(userRole)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
+            @Parameter(description = "Latitude", example = "12.324") @RequestParam(value = "lat", required = true) double latitude) {
 
         int tries = 5;
         while (tries > 0) {
@@ -150,7 +138,6 @@ public class CarsController {
     }
 
     @PostMapping
-    @ProtectedEndpoint
     @Operation(summary = "Create a new car reservation",
             description = "Creates a new car reservation. Requires admin or user role.")
     @ApiResponses(value = {
@@ -159,12 +146,8 @@ public class CarsController {
             @ApiResponse(responseCode = "500", description = "Some kind of error occurred :(")
     })
     public ResponseEntity<?> createCarReservation(
-            @Parameter(description = "Car reservation object DTO to create", required = true, schema = @Schema(implementation = CarReservationDTO.class)) @RequestBody CarReservationDTO reservationDTO,
-            @Parameter @CookieValue(value = "userRole", required = false) String userRole
+            @Parameter(description = "Car reservation object DTO to create", required = true, schema = @Schema(implementation = CarReservationDTO.class)) @RequestBody CarReservationDTO reservationDTO
     ) {
-        if (!Utils.roleAdminOrUser(userRole)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
 
         // Try log in the user to Carly fist:
         int resp = loginToCarly(reservationDTO.userEmail());

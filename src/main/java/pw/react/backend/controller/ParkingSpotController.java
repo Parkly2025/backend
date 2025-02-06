@@ -21,7 +21,6 @@ import pw.react.backend.exceptions.ModelAlreadyExistsException;
 import pw.react.backend.exceptions.ModelValidationException;
 import pw.react.backend.models.ParkingSpot;
 import pw.react.backend.services.ParkingSpotService;
-import pw.react.backend.utils.ProtectedEndpoint;
 import pw.react.backend.utils.Utils;
 
 import java.util.List;
@@ -105,7 +104,6 @@ public class ParkingSpotController {
 
 
     @PostMapping
-    @ProtectedEndpoint
     @Operation(summary = "Create a new parking spot", description = "Creates a new parking spot. Requires Admin role.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Parking spot created successfully",
@@ -115,10 +113,7 @@ public class ParkingSpotController {
             @ApiResponse(responseCode = "403", description = "Forbidden - Insufficient privileges (Admin role required)")
     })
     public ResponseEntity<?> createParkingSpot(
-            @Parameter(description = "Parking spot DTO object to create", required = true, schema = @Schema(implementation = CreateParkingSpotDTO.class)) @RequestBody CreateParkingSpotDTO createParkingSpotDTO,
-            @Parameter(hidden = true) @CookieValue(value = "userRole", required = false) String userRole) {
-        if (!Utils.roleAdmin(userRole))
-            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            @Parameter(description = "Parking spot DTO object to create", required = true, schema = @Schema(implementation = CreateParkingSpotDTO.class)) @RequestBody CreateParkingSpotDTO createParkingSpotDTO) {
         try {
             ParkingSpot savedParkingSpot = parkingSpotService.createParkingSpot(createParkingSpotDTO);
             return ResponseEntity.status(HttpStatus.CREATED).body(ReturnParkingSpotDTO.fromModel(savedParkingSpot));
@@ -129,7 +124,6 @@ public class ParkingSpotController {
 
 
     @PutMapping("/{id}")
-    @ProtectedEndpoint
     @Operation(summary = "Update a parking spot", description = "Updates a parking spot based on the provided ID and data. Requires Admin or User role.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Parking spot updated successfully",
@@ -139,10 +133,7 @@ public class ParkingSpotController {
     })
     public ResponseEntity<?> updateParkingSpot(
             @Parameter(description = "ID of the parking spot to update", required = true) @PathVariable Long id,
-            @Parameter(description = "Updated parking spot object", required = true, schema = @Schema(implementation = ParkingSpot.class)) @RequestBody ParkingSpot updatedParkingSpot,
-            @Parameter(hidden = true) @CookieValue(value = "userRole", required = false) String userRole) {
-        if (!Utils.roleAdminOrUser(userRole))
-            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            @Parameter(description = "Updated parking spot object", required = true, schema = @Schema(implementation = ParkingSpot.class)) @RequestBody ParkingSpot updatedParkingSpot) {
         Optional<ParkingSpot> ps = parkingSpotService.updateParkingSpot(id, updatedParkingSpot);
         if (ps.isPresent()) {
             return ResponseEntity.ok(ReturnParkingSpotDTO.fromModel(ps.get()));
@@ -152,7 +143,6 @@ public class ParkingSpotController {
 
 
     @DeleteMapping("/{id}")
-    @ProtectedEndpoint
     @Operation(summary = "Delete a parking spot", description = "Deletes a parking spot based on the provided ID. Requires Admin role.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Parking spot deleted successfully"),
@@ -160,10 +150,7 @@ public class ParkingSpotController {
             @ApiResponse(responseCode = "404", description = "Parking spot not found"),
     })
     public ResponseEntity<Void> deleteParkingSpot(
-            @Parameter(description = "ID of the parking spot to delete", required = true) @PathVariable Long id,
-            @Parameter(hidden = true) @CookieValue(value = "userRole", required = false) String userRole) {
-        if (!Utils.roleAdmin(userRole))
-            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            @Parameter(description = "ID of the parking spot to delete", required = true) @PathVariable Long id) {
         if (parkingSpotService.deleteParkingSpot(id)) {
             return ResponseEntity.noContent().build();
         }

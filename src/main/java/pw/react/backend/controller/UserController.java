@@ -2,7 +2,6 @@ package pw.react.backend.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.headers.Header;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -11,7 +10,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pw.react.backend.dto.CreateUserDTO;
@@ -21,7 +19,6 @@ import pw.react.backend.exceptions.ModelNotFoundException;
 import pw.react.backend.exceptions.ModelValidationException;
 import pw.react.backend.models.User;
 import pw.react.backend.services.UserService;
-import pw.react.backend.utils.ProtectedEndpoint;
 import pw.react.backend.utils.Utils;
 
 import java.util.HashMap;
@@ -40,7 +37,6 @@ public class UserController {
     }
 
     @GetMapping("/page/{page}")
-    @ProtectedEndpoint
     @Operation(summary = "Get all users (paginated - Admin Only)", description = "Retrieves a paginated list of users. Requires Admin role.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successful retrieval of users",
@@ -53,17 +49,12 @@ public class UserController {
             @Parameter(description = "Number of users per page.") @RequestParam(value = "size", required = false, defaultValue = "10") int size,
             @Parameter(description = "Sorting direction (asc or desc). Allowed: {\"asc\", \"desc\"}.") @RequestParam(value = "sortDirection", required = false, defaultValue = "asc") String sortDirection,
             @Parameter(description = "Search query string") @RequestParam(value = "searchQuery", required = false) String searchQuery,
-            @Parameter(description = "Specific parameter to search within. Allowed: ['username', 'email', 'firstName', 'lastName', 'fullName']") @RequestParam(value = "searchQueryParameter", required = false) String searchQueryParameter,
-            @Parameter(description = "Cookie containing User role.") @CookieValue(value = "userRole", required = false) String userRole) {
-        if (!Utils.roleAdmin(userRole)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
+            @Parameter(description = "Specific parameter to search within. Allowed: ['username', 'email', 'firstName', 'lastName', 'fullName']") @RequestParam(value = "searchQueryParameter", required = false) String searchQueryParameter) {
         return ResponseEntity.ok(userService.findAll(page, size, sortDirection, searchQuery, searchQueryParameter));
     }
 
 
     @GetMapping("/{id}")
-    @ProtectedEndpoint
     @Operation(summary = "Get user by ID", description = "Retrieves a user by its ID. Requires Admin or User role.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "User found", content = @Content(mediaType = "application/json", schema = @Schema(implementation = User.class))),
@@ -71,11 +62,7 @@ public class UserController {
             @ApiResponse(responseCode = "404", description = "Not Found - User with the specified ID does not exist")
     })
     public ResponseEntity<?> getUserById(
-            @Parameter(description = "ID of the user to retrieve", required = true) @PathVariable Long id,
-            @Parameter(description = "Cookie containing User role.") @CookieValue(value = "userRole", required = false) String userRole) {
-        if (!Utils.roleAdminOrUser(userRole)) {
-            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
-        }
+            @Parameter(description = "ID of the user to retrieve", required = true) @PathVariable Long id) {
         Optional<User> user = userService.findById(id);
         return user.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
@@ -102,7 +89,6 @@ public class UserController {
 
 
     @PutMapping("/{id}")
-    @ProtectedEndpoint
     @Operation(summary = "Update an existing user", description = "Updates an existing user based on the provided ID and data. Requires Admin or User role.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "User updated successfully",
@@ -115,10 +101,7 @@ public class UserController {
     })
     public ResponseEntity<?> updateUser(
             @Parameter(description = "ID of the user to update", required = true) @PathVariable Long id,
-            @Parameter(description = "Updated user object", required = true, schema = @Schema(implementation = User.class)) @RequestBody User updatedUser,
-            @Parameter(description = "Cookie containing User role.") @CookieValue(value = "userRole", required = false) String userRole) {
-        if (!Utils.roleAdminOrUser(userRole))
-            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            @Parameter(description = "Updated user object", required = true, schema = @Schema(implementation = User.class)) @RequestBody User updatedUser) {
         try {
             return new ResponseEntity<>(userService.update(id, updatedUser), HttpStatus.OK);
         } catch (ModelValidationException e) {
@@ -130,7 +113,6 @@ public class UserController {
 
 
     @DeleteMapping("/{id}")
-    @ProtectedEndpoint
     @Operation(summary = "Delete a user", description = "Deletes a user based on the provided ID. Requires Admin or User role.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "User deleted successfully"),
@@ -138,10 +120,7 @@ public class UserController {
             @ApiResponse(responseCode = "404", description = "Not Found - User with the specified ID does not exist")
     })
     public ResponseEntity<Void> deleteUser(
-            @Parameter(description = "ID of the user to delete", required = true) @PathVariable Long id,
-            @Parameter(description = "Cookie containing User role.") @CookieValue(value = "userRole", required = false) String userRole) {
-        if (!Utils.roleAdminOrUser(userRole))
-            return new ResponseEntity<>(HttpStatus.FORBIDDEN);
+            @Parameter(description = "ID of the user to delete", required = true) @PathVariable Long id) {
         try {
             userService.delete(id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -154,20 +133,13 @@ public class UserController {
     @PostMapping("/login")
     @Operation(summary = "Login user", description = "Authenticates a user and sets a cookie containing the user's role.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Login successful. Cookie set.",
-                    headers = @io.swagger.v3.oas.annotations.headers.Header(
-                            name = HttpHeaders.SET_COOKIE,
-                            description = "Cookie containing the user's role.",
-                            schema = @io.swagger.v3.oas.annotations.media.Schema(type = "string"))), // Document the Set-Cookie header
+            @ApiResponse(responseCode = "200", description = "Login successful."), // Document the Set-Cookie header
             @ApiResponse(responseCode = "400", description = "Bad Request - Invalid credentials",
                     content = @Content(mediaType = "text/plain"))
     })
     public ResponseEntity<?> loginUser(@Parameter(description = "Login credentials", required = true, schema = @io.swagger.v3.oas.annotations.media.Schema(implementation = LoginDTO.class)) @RequestBody LoginDTO loginDTO) {
         try {
             User user = userService.login(loginDTO);
-            ResponseCookie cookie = ResponseCookie.from("userRole", user.getRole().name())
-                    .maxAge(10 * 60 * 60).path("/").httpOnly(true).build();
-
             Map<String, Object> responseBody = new HashMap<>();
             responseBody.put("userId", user.getId());
             responseBody.put("username", user.getUsername());
@@ -175,7 +147,6 @@ public class UserController {
             responseBody.put("email", user.getEmail());
 
             return ResponseEntity.ok()
-                    .header(HttpHeaders.SET_COOKIE, cookie.toString())
                     .body(responseBody);
         } catch (ModelNotFoundException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
