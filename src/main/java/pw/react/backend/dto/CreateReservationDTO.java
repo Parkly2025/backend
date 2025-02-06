@@ -6,13 +6,14 @@ import pw.react.backend.models.User;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 public record CreateReservationDTO(Long parkingSpotId, Long userId, LocalDateTime startTime,
-                                   LocalDateTime endTime, BigDecimal totalCost) {
+                                   LocalDateTime endTime, Optional<BigDecimal> totalCost) {
     public static CreateReservationDTO fromModel(Reservation reservation) {
         return new CreateReservationDTO(reservation.getParkingSpot().getId(),
                 reservation.getUser().getId(), reservation.getStartTime(),
-                reservation.getEndTime(), reservation.getTotalCost());
+                reservation.getEndTime(), Optional.of(reservation.getTotalCost()));
     }
 
     public Reservation toModel(ParkingSpot parkingSpot, User user) {
@@ -21,7 +22,6 @@ public record CreateReservationDTO(Long parkingSpotId, Long userId, LocalDateTim
         reservation.setUser(user);
         reservation.setStartTime(startTime);
         reservation.setEndTime(endTime);
-        reservation.setTotalCost(totalCost);
         return reservation;
     }
 }
